@@ -17,11 +17,11 @@ type NavbarProps = {
 };
 
 const navItems = [
-  { id: "home", href: "#home" },
-  { id: "services", href: "#services" },
-  { id: "pricing", href: "#pricing" },
-  { id: "about", href: "#about" },
-  { id: "contact", href: "#contact" },
+  { id: "home", href: "/" },
+  { id: "services", href: "/#services" },
+  { id: "pricing", href: "/#pricing" },
+  { id: "about", href: "/about" },
+  { id: "contact", href: "/#contact" },
 ] as const;
 
 export function Navbar({ language, onLanguageChange, copy }: NavbarProps) {
@@ -59,7 +59,7 @@ export function Navbar({ language, onLanguageChange, copy }: NavbarProps) {
 
   return (
     <header className={isScrolled ? "navbar navbar--scrolled" : "navbar"}>
-      <a className="navbar__brand" href="#home" aria-label="Think Solutions home" onClick={() => setIsOpen(false)}>
+      <a className="navbar__brand" href="/" aria-label="Think Solutions home" onClick={() => setIsOpen(false)}>
         <Logo />
       </a>
 

@@ -46,12 +46,6 @@ export const translations: Record<
       intro: string;
       items: Record<ServiceId, ServiceCopy>;
     };
-    search: {
-      title: string;
-      placeholder: string;
-      clear: string;
-      noResults: string;
-    };
     why: {
       eyebrow: string;
       title: string;
@@ -78,14 +72,6 @@ export const translations: Record<
     contact: {
       eyebrow: string;
       title: string;
-      intro: string;
-      fields: Record<"name" | "email" | "company" | "service" | "message", string>;
-      placeholders: Record<"name" | "email" | "company" | "message", string>;
-      serviceOptions: string[];
-      submit: string;
-      success: string;
-      required: string;
-      invalidEmail: string;
     };
     footer: {
       description: string;
@@ -147,12 +133,6 @@ export const translations: Record<
         },
       },
     },
-    search: {
-      title: "What are you looking for?",
-      placeholder: "Search our services...",
-      clear: "Clear",
-      noResults: "No services found. Try another search.",
-    },
     why: {
       eyebrow: "Why Think Solutions",
       title: "Built for clarity, momentum and measurable business value.",
@@ -208,32 +188,6 @@ export const translations: Record<
     contact: {
       eyebrow: "Contact",
       title: "Start a focused conversation.",
-      intro: "Tell us what you need and the form can be connected to an API or email service when your backend is ready.",
-      fields: {
-        name: "Name",
-        email: "Email",
-        company: "Company",
-        service: "Service",
-        message: "Message",
-      },
-      placeholders: {
-        name: "Your name",
-        email: "you@example.com",
-        company: "Company name",
-        message: "Tell us about your project or business need",
-      },
-      serviceOptions: [
-        "Web Design",
-        "Social Media Management",
-        "Data Solutions",
-        "UI/UX & Graphic Design",
-        "Business Support",
-        "Other",
-      ],
-      submit: "Start a Project",
-      success: "Form validated. Connect your preferred API or email service to submit this request.",
-      required: "This field is required.",
-      invalidEmail: "Enter a valid email address.",
     },
     footer: {
       description: "Digital, design and data solutions built around your business.",
@@ -294,12 +248,6 @@ export const translations: Record<
         },
       },
     },
-    search: {
-      title: "Wonach suchen Sie?",
-      placeholder: "Leistungen suchen...",
-      clear: "Zurücksetzen",
-      noResults: "Keine Leistungen gefunden. Versuchen Sie eine andere Suche.",
-    },
     why: {
       eyebrow: "Warum Think Solutions",
       title: "Entwickelt für Klarheit, Tempo und echten Geschäftswert.",
@@ -355,25 +303,6 @@ export const translations: Record<
     contact: {
       eyebrow: "Kontakt",
       title: "Starten Sie ein klares Gespräch.",
-      intro: "Beschreiben Sie Ihren Bedarf. Das Formular kann später mit einer API oder einem E-Mail-Service verbunden werden.",
-      fields: {
-        name: "Name",
-        email: "E-Mail",
-        company: "Unternehmen",
-        service: "Leistung",
-        message: "Nachricht",
-      },
-      placeholders: {
-        name: "Ihr Name",
-        email: "sie@beispiel.com",
-        company: "Unternehmensname",
-        message: "Beschreiben Sie Ihr Projekt oder Ihren Bedarf",
-      },
-      serviceOptions: ["Webdesign", "Social Media Management", "Datenlösungen", "UI/UX & Grafikdesign", "Business Support", "Sonstiges"],
-      submit: "Projekt starten",
-      success: "Formular geprüft. Verbinden Sie Ihren API- oder E-Mail-Service, um die Anfrage zu senden.",
-      required: "Dieses Feld ist erforderlich.",
-      invalidEmail: "Geben Sie eine gültige E-Mail-Adresse ein.",
     },
     footer: {
       description: "Digitale, Design- und Datenlösungen, die auf Ihr Unternehmen abgestimmt sind.",
@@ -434,12 +363,6 @@ export const translations: Record<
         },
       },
     },
-    search: {
-      title: "Çfarë po kërkoni?",
-      placeholder: "Kërko shërbimet...",
-      clear: "Pastro",
-      noResults: "Nuk u gjet asnjë shërbim. Provoni një kërkim tjetër.",
-    },
     why: {
       eyebrow: "Pse Think Solutions",
       title: "Ndërtuar për qartësi, lëvizje dhe vlerë biznesi.",
@@ -495,25 +418,6 @@ export const translations: Record<
     contact: {
       eyebrow: "Kontakt",
       title: "Filloni një bisedë të qartë.",
-      intro: "Na tregoni çfarë ju duhet. Formulari mund të lidhet më vonë me API ose shërbim emaili.",
-      fields: {
-        name: "Emri",
-        email: "Email",
-        company: "Kompania",
-        service: "Shërbimi",
-        message: "Mesazhi",
-      },
-      placeholders: {
-        name: "Emri juaj",
-        email: "ju@example.com",
-        company: "Emri i kompanisë",
-        message: "Na tregoni për projektin ose nevojën e biznesit",
-      },
-      serviceOptions: ["Web Design", "Menaxhim i Rrjeteve Sociale", "Zgjidhje për të Dhëna", "UI/UX & Dizajn Grafik", "Mbështetje Biznesi", "Tjetër"],
-      submit: "Fillo Projektin",
-      success: "Formulari u validua. Lidheni API-në ose emailin tuaj për ta dërguar kërkesën.",
-      required: "Kjo fushë është e detyrueshme.",
-      invalidEmail: "Shkruani një email të vlefshëm.",
     },
     footer: {
       description: "Zgjidhje digjitale, dizajni dhe të dhënash të ndërtuara rreth biznesit tuaj.",
@@ -574,12 +478,6 @@ export const translations: Record<
         },
       },
     },
-    search: {
-      title: "Што барате?",
-      placeholder: "Пребарај услуги...",
-      clear: "Исчисти",
-      noResults: "Не се пронајдени услуги. Обидете се со друго пребарување.",
-    },
     why: {
       eyebrow: "Зошто Think Solutions",
       title: "Создадено за јасност, напредок и бизнис вредност.",
@@ -635,25 +533,6 @@ export const translations: Record<
     contact: {
       eyebrow: "Контакт",
       title: "Започнете јасен разговор.",
-      intro: "Кажете ни што ви треба. Формата подоцна може да се поврзе со API или email сервис.",
-      fields: {
-        name: "Име",
-        email: "Е-пошта",
-        company: "Компанија",
-        service: "Услуга",
-        message: "Порака",
-      },
-      placeholders: {
-        name: "Вашето име",
-        email: "vie@example.com",
-        company: "Име на компанија",
-        message: "Опишете го проектот или бизнис потребата",
-      },
-      serviceOptions: ["Веб дизајн", "Менаџирање на социјални медиуми", "Дата решенија", "UI/UX & графички дизајн", "Бизнис поддршка", "Друго"],
-      submit: "Започни проект",
-      success: "Формата е валидирана. Поврзете API или email сервис за испраќање на барањето.",
-      required: "Ова поле е задолжително.",
-      invalidEmail: "Внесете валидна е-пошта.",
     },
     footer: {
       description: "Дигитални, дизајн и дата решенија создадени околу вашиот бизнис.",

@@ -1,47 +1,30 @@
+import { Mail, Phone } from "lucide-react";
 import type { translations } from "../data/translations";
-import { services } from "../data/services";
-import { Logo } from "./Logo";
+import { SectionHeading } from "./SectionHeading";
 
-type FooterProps = {
+type ContactProps = {
   copy: (typeof translations)["en"];
 };
 
-export function Footer({ copy }: FooterProps) {
-  const year = new Date().getFullYear();
+const CONTACT_EMAIL = "info@thinkofsolutions.com";
+const CONTACT_PHONE = "+398 71 628 405";
+const CONTACT_PHONE_HREF = "+39871628405";
 
+export function Contact({ copy }: ContactProps) {
   return (
-    <footer className="footer">
-      <div className="footer__brand">
-        <Logo />
-        <p>{copy.footer.description}</p>
-      </div>
+    <section className="section section--contact" id="contact">
+      <SectionHeading eyebrow={copy.contact.eyebrow} title={copy.contact.title} align="center" />
 
-      <div className="footer__columns">
-        <div>
-          <h2>{copy.footer.navigation}</h2>
-          <a href="#home">{copy.nav.home}</a>
-          <a href="#services">{copy.nav.services}</a>
-          <a href="#pricing">{copy.nav.pricing}</a>
-          <a href="#about">{copy.nav.about}</a>
-          <a href="#contact">{copy.nav.contact}</a>
-        </div>
-        <div>
-          <h2>{copy.footer.services}</h2>
-          {services.map((service) => (
-            <a href="#services" key={service.id}>
-              {copy.services.items[service.id].title}
-            </a>
-          ))}
-        </div>
-        <div>
-          <h2>{copy.footer.contact}</h2>
-          <a href="#contact">{copy.contact.submit}</a>
-          <h2>{copy.footer.socials}</h2>
-          <span className="social-placeholders">LinkedIn / Instagram / Facebook</span>
-        </div>
+      <div className="contact-details">
+        <a className="contact-details__item" href={`mailto:${CONTACT_EMAIL}`}>
+          <Mail size={20} aria-hidden="true" />
+          <span>{CONTACT_EMAIL}</span>
+        </a>
+        <a className="contact-details__item" href={`tel:${CONTACT_PHONE_HREF}`}>
+          <Phone size={20} aria-hidden="true" />
+          <span>{CONTACT_PHONE}</span>
+        </a>
       </div>
-
-      <p className="footer__bottom">© {year} Think Solutions. {copy.footer.copyright}</p>
-    </footer>
+    </section>
   );
 }
