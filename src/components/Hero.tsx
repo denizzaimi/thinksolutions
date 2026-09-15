@@ -1,4 +1,4 @@
-import { ArrowRight, MousePointer2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 
@@ -28,9 +28,6 @@ export function Hero({ copy }: HeroProps) {
         animate="visible"
         transition={{ staggerChildren: reducedMotion ? 0 : 0.1 }}
       >
-        <motion.div variants={fadeUp} transition={{ duration: 0.5 }} className="hero__brand-panel">
-          <span>{copy.eyebrow}</span>
-        </motion.div>
         <motion.h1 variants={fadeUp} transition={{ duration: 0.6 }}>
           {copy.title}
         </motion.h1>
@@ -50,26 +47,15 @@ export function Hero({ copy }: HeroProps) {
 
       <motion.div
         className="hero__visual"
-        aria-label="Think Solutions service system"
+        aria-label="A modern multi-monitor workspace"
         initial={{ opacity: 1, y: reducedMotion ? 0 : 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: reducedMotion ? 0 : 0.25 }}
       >
-        <div className="signal-map">
-          <span className="signal-map__node signal-map__node--dark" />
-          <span className="signal-map__node" />
-          <span className="signal-map__node" />
-          <span className="signal-map__node signal-map__node--dark" />
-          <span className="signal-map__node" />
-          <span className="signal-map__node" />
-          <span className="signal-map__node signal-map__node--dark" />
-          <span className="signal-map__line signal-map__line--one" />
-          <span className="signal-map__line signal-map__line--two" />
-          <span className="signal-map__line signal-map__line--three" />
-        </div>
-        <div className="hero__visual-footer">
-          <span>{copy.brandLine}</span>
-          <MousePointer2 size={18} aria-hidden="true" />
+        <div className="hero__image-placeholder" role="img" aria-label="Hero image placeholder">
+          <span className="hero__placeholder-screen hero__placeholder-screen--wide" />
+          <span className="hero__placeholder-screen hero__placeholder-screen--tall" />
+          <span className="hero__placeholder-desk" />
         </div>
       </motion.div>
     </section>
