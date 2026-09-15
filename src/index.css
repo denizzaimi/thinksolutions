@@ -94,7 +94,7 @@ img {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
   gap: 24px;
   width: min(calc(100% - 32px), var(--container));
@@ -284,8 +284,8 @@ img {
   margin: 0 auto;
   padding: 80px 20px 100px;
   background:
-    linear-gradient(180deg, rgba(7, 24, 42, 0.28), rgba(7, 24, 42, 0.26)),
-    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    linear-gradient(180deg, rgba(18, 63, 103, 0.18), rgba(18, 63, 103, 0.08)),
+    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=80") center/cover no-repeat;
 }
 
 .hero__content {

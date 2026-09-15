@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { languageLabels, type Language } from "../data/translations";
+import { Logo } from "./Logo";
 
 type NavbarProps = {
   language: Language;
@@ -59,6 +60,10 @@ export function Navbar({ language, onLanguageChange, copy }: NavbarProps) {
 
   return (
     <header className={isScrolled ? "navbar navbar--scrolled" : "navbar"}>
+      <a className="navbar__brand" href="/" aria-label="Think Solutions home" onClick={() => setIsOpen(false)}>
+        <Logo />
+      </a>
+
       <nav className="navbar__links" aria-label="Primary navigation">
         {navItems.map((item) => (
           <a key={item.id} href={item.href}>
