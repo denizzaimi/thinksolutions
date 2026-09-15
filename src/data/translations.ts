@@ -24,7 +24,7 @@ type PricingCopy = {
 export const translations: Record<
   Language,
   {
-    nav: Record<"home" | "services" | "pricing" | "about" | "contact", string>;
+    nav: Record<"home" | "services" | "pricing" | "ourWork" | "about" | "contact", string>;
     common: {
       learnMore: string;
       language: string;
@@ -69,6 +69,13 @@ export const translations: Record<
       body: string;
       pillars: string[];
     };
+    ourWork: {
+      eyebrow: string;
+      title: string;
+      intro: string;
+      comingSoon: string;
+      viewProject: string;
+    };
     contact: {
       eyebrow: string;
       title: string;
@@ -88,6 +95,7 @@ export const translations: Record<
       home: "Home",
       services: "Services",
       pricing: "Pricing",
+      ourWork: "Our Work",
       about: "About",
       contact: "Contact",
     },
@@ -185,6 +193,13 @@ export const translations: Record<
         "Think Solutions combines technology, design, data, digital strategy and business support to help companies improve the way they present, operate and grow. The work stays focused on clear outcomes and practical solutions.",
       pillars: ["Technology", "Design", "Data", "Digital strategy", "Business support"],
     },
+    ourWork: {
+      eyebrow: "Our Work",
+      title: "A look at what we've built.",
+      intro: "A selection of projects Think Solutions has delivered for real clients.",
+      comingSoon: "Project case studies are being prepared and will be added here soon.",
+      viewProject: "View Project",
+    },
     contact: {
       eyebrow: "Contact",
       title: "Start a focused conversation.",
@@ -203,6 +218,7 @@ export const translations: Record<
       home: "Start",
       services: "Leistungen",
       pricing: "Pakete",
+      ourWork: "Unsere Arbeit",
       about: "Über uns",
       contact: "Kontakt",
     },
@@ -300,6 +316,13 @@ export const translations: Record<
         "Think Solutions verbindet Technologie, Design, Daten, digitale Strategie und Business Support, damit Unternehmen Auftreten, Prozesse und Wachstum verbessern können.",
       pillars: ["Technologie", "Design", "Daten", "Digitale Strategie", "Business Support"],
     },
+    ourWork: {
+      eyebrow: "Unsere Arbeit",
+      title: "Ein Einblick in unsere Projekte.",
+      intro: "Eine Auswahl an Projekten, die Think Solutions für echte Kunden umgesetzt hat.",
+      comingSoon: "Projektbeispiele werden vorbereitet und in Kürze hier ergänzt.",
+      viewProject: "Projekt ansehen",
+    },
     contact: {
       eyebrow: "Kontakt",
       title: "Starten Sie ein klares Gespräch.",
@@ -318,6 +341,7 @@ export const translations: Record<
       home: "Ballina",
       services: "Shërbimet",
       pricing: "Paketat",
+      ourWork: "Punët Tona",
       about: "Rreth nesh",
       contact: "Kontakt",
     },
@@ -415,6 +439,13 @@ export const translations: Record<
         "Think Solutions kombinon teknologjinë, dizajnin, të dhënat, strategjinë digjitale dhe mbështetjen e biznesit për t'i ndihmuar kompanitë të përmirësojnë prezantimin, proceset dhe rritjen.",
       pillars: ["Teknologji", "Dizajn", "Të dhëna", "Strategji digjitale", "Mbështetje biznesi"],
     },
+    ourWork: {
+      eyebrow: "Punët Tona",
+      title: "Një vështrim mbi atë që kemi ndërtuar.",
+      intro: "Një përzgjedhje projektesh që Think Solutions ka realizuar për klientë realë.",
+      comingSoon: "Studimet e rasteve të projekteve po përgatiten dhe do të shtohen së shpejti këtu.",
+      viewProject: "Shiko Projektin",
+    },
     contact: {
       eyebrow: "Kontakt",
       title: "Filloni një bisedë të qartë.",
@@ -433,6 +464,7 @@ export const translations: Record<
       home: "Почетна",
       services: "Услуги",
       pricing: "Пакети",
+      ourWork: "Нашата работа",
       about: "За нас",
       contact: "Контакт",
     },
@@ -529,6 +561,13 @@ export const translations: Record<
       body:
         "Think Solutions комбинира технологија, дизајн, податоци, дигитална стратегија и бизнис поддршка за да им помогне на компаниите да го подобрат претставувањето, работењето и растот.",
       pillars: ["Технологија", "Дизајн", "Податоци", "Дигитална стратегија", "Бизнис поддршка"],
+    },
+    ourWork: {
+      eyebrow: "Нашата работа",
+      title: "Поглед кон она што го изградивме.",
+      intro: "Избор на проекти што Think Solutions ги реализираше за реални клиенти.",
+      comingSoon: "Студии на случаи од проекти се подготвуваат и наскоро ќе бидат додадени овде.",
+      viewProject: "Погледни проект",
     },
     contact: {
       eyebrow: "Контакт",

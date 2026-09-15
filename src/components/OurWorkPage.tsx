@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import type { Language } from "../data/translations";
 import { translations } from "../data/translations";
-import { projects } from "../data/work";
+import { projects } from "../data/Work";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { PageHeader } from "./PageHeader";

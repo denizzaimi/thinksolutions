@@ -7,6 +7,7 @@ export type ServiceId =
 
 export type Service = {
   id: ServiceId;
+  slug: string;
   icon: "monitor" | "megaphone" | "barChart" | "palette" | "briefcase";
   keywords: string[];
 };
@@ -14,16 +15,19 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "webDesign",
+    slug: "web-design",
     icon: "monitor",
     keywords: ["website", "web design", "responsive", "interfaces", "landing page", "modern websites"],
   },
   {
     id: "socialMedia",
+    slug: "social-media",
     icon: "megaphone",
     keywords: ["instagram", "facebook", "social media", "content strategy", "growth", "business presence"],
   },
   {
     id: "dataSolutions",
+    slug: "data-solutions",
     icon: "barChart",
     keywords: [
       "power bi",
@@ -38,11 +42,13 @@ export const services: Service[] = [
   },
   {
     id: "uiUxGraphic",
+    slug: "ui-ux-graphic",
     icon: "palette",
     keywords: ["figma", "canva", "ui", "ux", "ui/ux", "graphic design", "social media graphics", "business visuals"],
   },
   {
     id: "businessSupport",
+    slug: "business-support",
     icon: "briefcase",
     keywords: ["digital business support", "processes", "practical digital solutions", "tailored solutions"],
   },

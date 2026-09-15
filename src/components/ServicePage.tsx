@@ -1,7 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import type { ServiceId } from "../data/services";
-import { serviceDetails } from "../data/serviceDetails";
+import { serviceDetails } from "../data/Servicedetails";
 import type { Language } from "../data/translations";
 import { translations } from "../data/translations";
 import { useReducedMotion } from "../hooks/useReducedMotion";

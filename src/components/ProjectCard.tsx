@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Project } from "../data/work";
+import type { Project } from "../data/Work";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 
 type ProjectCardProps = {
