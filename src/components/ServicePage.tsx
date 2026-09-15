@@ -66,7 +66,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         </section>
 
         <section className="section section--tinted service-page__section">
-          <h2 className="service-page__heading">Main capabilities</h2>
+          <h2 className="service-page__heading">Main Capabilities</h2>
           <div className="capability-grid">
             {detail.capabilities.map((capability, index) => (
               <motion.article
@@ -85,7 +85,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         </section>
 
         <section className="section service-page__section">
-          <h2 className="service-page__heading">Technologies &amp; tools</h2>
+          <h2 className="service-page__heading">Technologies &amp; Tools</h2>
           <div className="tool-badges">
             {detail.tools.map((tool) => (
               <span className="tool-badge" key={tool}>
@@ -96,7 +96,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         </section>
 
         <section className="section section--dark service-page__section">
-          <h2 className="service-page__heading service-page__heading--light">Why it matters for your business</h2>
+          <h2 className="service-page__heading service-page__heading--light">Why It Matters for Your Business</h2>
           <div className="benefit-grid">
             {detail.benefits.map((benefit) => (
               <div className="benefit-grid__item" key={benefit}>
