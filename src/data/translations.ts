@@ -108,8 +108,8 @@ export const translations: Record<
     },
     hero: {
       eyebrow: "Digital business solutions",
-      title: "Think smarter. Build better. Grow further.",
-      subtitle: "Digital, design and data solutions built around your business.",
+      title: "Think smarter. Grow further.",
+      subtitle: "",
       servicesCta: "Explore Services",
       contactCta: "Let's Work Together",
       brandLine: "THINK. DESIGN. ANALYSE. GROW.",

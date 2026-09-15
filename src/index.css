@@ -265,13 +265,14 @@ img {
 }
 
 .button--secondary {
-  border-color: rgba(247, 255, 207, 0.45);
-  background: rgba(247, 255, 207, 0.08);
-  color: var(--secondary);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: #ffffff;
+  color: #12334f;
+  box-shadow: 0 12px 24px rgba(17, 26, 39, 0.18);
 }
 
 .button--secondary:hover {
-  background: rgba(247, 255, 207, 0.16);
+  background: #f2f7ff;
 }
 
 .hero {
@@ -362,6 +363,7 @@ img {
   color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1.05rem, 1.7vw, 1.32rem);
   line-height: 1.7;
+  min-height: 0;
 }
 
 .hero__actions {
