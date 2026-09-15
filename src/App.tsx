@@ -80,7 +80,7 @@ function App() {
           },
         }}
       />
-      <main>
+      <main className="home-page">
         <Hero copy={copy.hero} />
         <Services copy={copy} />
         <WhyThinkSolutions copy={copy} />
