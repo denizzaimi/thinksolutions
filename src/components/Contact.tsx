@@ -7,8 +7,8 @@ type ContactProps = {
 };
 
 const CONTACT_EMAIL = "info@thinkofsolutions.com";
-const CONTACT_PHONE = "+398 71 628 405";
-const CONTACT_PHONE_HREF = "+39871628405";
+const CONTACT_PHONE = "+389 71 628 405";
+const CONTACT_PHONE_HREF = "+38971628405";
 
 export function Contact({ copy }: ContactProps) {
   return (
