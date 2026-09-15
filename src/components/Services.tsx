@@ -14,7 +14,12 @@ export function Services({ copy }: ServicesProps) {
 
   return (
     <section className="section" id="services">
-      <SectionHeading eyebrow={copy.services.eyebrow} title={copy.services.title} intro={copy.services.intro} />
+      <SectionHeading
+        eyebrow={copy.services.eyebrow}
+        title={copy.services.title}
+        intro={copy.services.intro}
+        align="center"
+      />
       <motion.div
         className="service-grid"
         initial="hidden"

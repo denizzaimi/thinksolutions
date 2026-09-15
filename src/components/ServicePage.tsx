@@ -40,8 +40,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
           eyebrow={copy.services.eyebrow}
           title={serviceCopy.title}
           intro={detail.tagline}
-          backHref="/#services"
-          backLabel={`${copy.nav.services}`}
+          className="page-header--centered"
         />
 
         <section className="section service-page__section">
