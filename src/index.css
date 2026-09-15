@@ -265,15 +265,17 @@ img {
 }
 
 .button--secondary {
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
   background: #ffffff;
   color: #111111;
+  opacity: 1;
   box-shadow: 0 12px 24px rgba(17, 26, 39, 0.18);
 }
 
 .button--secondary:hover {
   background: #f3f3f3;
   color: #111111;
+  opacity: 1;
 }
 
 .hero {
