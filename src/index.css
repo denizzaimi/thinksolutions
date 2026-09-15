@@ -265,14 +265,15 @@ img {
 }
 
 .button--secondary {
-  border-color: rgba(12, 46, 74, 0.2);
+  border-color: #ffffff;
   background: #ffffff;
-  color: #12334f;
+  color: #111111;
   box-shadow: 0 12px 24px rgba(17, 26, 39, 0.18);
 }
 
 .button--secondary:hover {
-  background: #edf4ff;
+  background: #f3f3f3;
+  color: #111111;
 }
 
 .hero {
