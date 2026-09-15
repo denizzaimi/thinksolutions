@@ -94,7 +94,7 @@ img {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
   gap: 24px;
   width: min(calc(100% - 32px), var(--container));
@@ -275,20 +275,25 @@ img {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  position: relative;
+  display: flex;
   align-items: center;
-  gap: 48px;
-  width: min(calc(100% - 32px), var(--container));
-  min-height: calc(100vh - 92px);
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 62px);
   margin: 0 auto;
-  padding: 72px 0 96px;
+  padding: 80px 20px 100px;
+  background:
+    linear-gradient(180deg, rgba(7, 24, 42, 0.28), rgba(7, 24, 42, 0.26)),
+    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
+  width: min(100%, 980px);
   min-width: 0;
+  text-align: center;
 }
 
 .home-page {
@@ -313,6 +318,15 @@ img {
   justify-content: center;
 }
 
+.hero__eyebrow {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
 .hero__brand-panel {
   display: inline-flex;
   align-items: center;
@@ -333,98 +347,56 @@ img {
 }
 
 .hero h1 {
-  max-width: 780px;
-  margin: 0;
-  color: var(--text);
-  font-size: 4.55rem;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: clamp(3rem, 5vw, 5.6rem);
   line-height: 0.96;
-  letter-spacing: 0;
+  letter-spacing: -0.06em;
+  text-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
 }
 
 .hero__subtitle {
-  max-width: 580px;
-  margin: 28px 0 0;
-  color: var(--muted);
-  font-size: 1.2rem;
+  max-width: 640px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.05rem, 1.7vw, 1.32rem);
   line-height: 1.7;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 34px;
 }
 
 .hero__actions .button--secondary {
-  border-color: var(--border);
-  color: var(--primary-dark);
-  background: var(--surface);
+  border-color: rgba(255, 255, 255, 0.42);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .hero__actions .button--secondary:hover {
-  background: var(--surface-tinted);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero__brand-line {
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
 }
 
 .hero__visual {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-  min-height: 560px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface-charcoal);
-  box-shadow: var(--shadow);
+  display: none;
 }
 
 .hero__image-placeholder {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 560px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(247, 255, 207, 0.16), transparent 28%),
-    linear-gradient(145deg, var(--primary-deep) 0%, #1d1111 55%, var(--primary-dark) 100%);
-}
-
-.hero__placeholder-screen {
-  position: absolute;
-  display: block;
-  border: 10px solid #171313;
-  border-bottom-width: 18px;
-  background:
-    linear-gradient(145deg, rgba(247, 255, 207, 0.84) 0 42%, transparent 42%),
-    linear-gradient(135deg, var(--primary-dark), #211617);
-  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.35);
-}
-
-.hero__placeholder-screen--wide {
-  top: 21%;
-  left: 12%;
-  width: 62%;
-  height: 36%;
-  transform: perspective(600px) rotateY(5deg);
-}
-
-.hero__placeholder-screen--tall {
-  top: 13%;
-  right: 8%;
-  width: 22%;
-  height: 56%;
-  transform: perspective(600px) rotateY(-5deg);
-}
-
-.hero__placeholder-desk {
-  position: absolute;
-  right: 7%;
-  bottom: 17%;
-  left: 7%;
-  height: 9%;
-  border-radius: 6px;
-  background: #51413c;
-  box-shadow: 0 24px 0 #120e0e, 0 30px 40px rgba(0, 0, 0, 0.38);
+  display: none;
 }
 
 .hero__image {

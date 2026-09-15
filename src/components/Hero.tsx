@@ -28,6 +28,9 @@ export function Hero({ copy }: HeroProps) {
         animate="visible"
         transition={{ staggerChildren: reducedMotion ? 0 : 0.1 }}
       >
+        <motion.p variants={fadeUp} transition={{ duration: 0.6 }} className="hero__eyebrow">
+          {copy.eyebrow}
+        </motion.p>
         <motion.h1 variants={fadeUp} transition={{ duration: 0.6 }}>
           {copy.title}
         </motion.h1>
@@ -43,20 +46,9 @@ export function Hero({ copy }: HeroProps) {
             {copy.contactCta}
           </a>
         </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="hero__visual"
-        aria-label="A modern multi-monitor workspace"
-        initial={{ opacity: 1, y: reducedMotion ? 0 : 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: reducedMotion ? 0 : 0.25 }}
-      >
-        <div className="hero__image-placeholder" role="img" aria-label="Hero image placeholder">
-          <span className="hero__placeholder-screen hero__placeholder-screen--wide" />
-          <span className="hero__placeholder-screen hero__placeholder-screen--tall" />
-          <span className="hero__placeholder-desk" />
-        </div>
+        <motion.p variants={fadeUp} transition={{ duration: 0.6 }} className="hero__brand-line">
+          {copy.brandLine}
+        </motion.p>
       </motion.div>
     </section>
   );
