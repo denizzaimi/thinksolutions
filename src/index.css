@@ -285,7 +285,7 @@ img {
   padding: 80px 20px 100px;
   background:
     linear-gradient(180deg, rgba(18, 63, 103, 0.18), rgba(18, 63, 103, 0.08)),
-    url("https://www.pexels.com/photo/dense-clouds-in-sky-in-black-and-white-20357976/.jpeg") center/cover no-repeat;
+    url("/pexels-arash-kh-1030567404-20357976.jpg") center/cover no-repeat;
 }
 
 .hero__content {
