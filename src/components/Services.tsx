@@ -1,48 +1,55 @@
-import { motion } from "framer-motion";
-import { services } from "../data/services";
-import type { translations } from "../data/translations";
-import { useReducedMotion } from "../hooks/useReducedMotion";
-import { SectionHeading } from "./SectionHeading";
-import { ServiceCard } from "./ServiceCard";
+export type ServiceId =
+  | "webDesign"
+  | "socialMedia"
+  | "dataSolutions"
+  | "uiUxGraphic"
+  | "businessSupport";
 
-type ServicesProps = {
-  copy: (typeof translations)["en"];
+export type Service = {
+  id: ServiceId;
+  slug: string;
+  icon: "monitor" | "megaphone" | "barChart" | "palette" | "briefcase";
+  keywords: string[];
 };
 
-export function Services({ copy }: ServicesProps) {
-  const reducedMotion = useReducedMotion();
-
-  return (
-    <section className="section" id="services">
-      <SectionHeading eyebrow={copy.services.eyebrow} title={copy.services.title} intro={copy.services.intro} />
-      <motion.div
-        className="service-grid"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: reducedMotion ? 0 : 0.08 } },
-        }}
-      >
-        {services.map((service) => (
-          <motion.div
-            key={service.id}
-            variants={{
-              hidden: { opacity: reducedMotion ? 1 : 0, y: reducedMotion ? 0 : 18 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.45 }}
-          >
-            <ServiceCard
-              service={service}
-              title={copy.services.items[service.id].title}
-              description={copy.services.items[service.id].description}
-              cta={copy.common.learnMore}
-            />
-          </motion.div>
-        ))}
-      </motion.div>
-    </section>
-  );
-}
+export const services: Service[] = [
+  {
+    id: "webDesign",
+    slug: "web-design",
+    icon: "monitor",
+    keywords: ["website", "web design", "responsive", "interfaces", "landing page", "modern websites"],
+  },
+  {
+    id: "socialMedia",
+    slug: "social-media",
+    icon: "megaphone",
+    keywords: ["instagram", "facebook", "social media", "content strategy", "growth", "business presence"],
+  },
+  {
+    id: "dataSolutions",
+    slug: "data-solutions",
+    icon: "barChart",
+    keywords: [
+      "power bi",
+      "excel",
+      "sql",
+      "mysql",
+      "looker studio",
+      "dashboard",
+      "data analysis",
+      "business reporting",
+    ],
+  },
+  {
+    id: "uiUxGraphic",
+    slug: "ui-ux-design",
+    icon: "palette",
+    keywords: ["figma", "canva", "ui", "ux", "ui/ux", "graphic design", "social media graphics", "business visuals"],
+  },
+  {
+    id: "businessSupport",
+    slug: "business-support",
+    icon: "briefcase",
+    keywords: ["digital business support", "processes", "practical digital solutions", "tailored solutions"],
+  },
+];

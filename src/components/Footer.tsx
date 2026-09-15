@@ -25,6 +25,7 @@ export function Footer({ copy }: FooterProps) {
           <h2>{copy.footer.navigation}</h2>
           <a href="/">{copy.nav.home}</a>
           <a href="/#services">{copy.nav.services}</a>
+          <a href="/our-work">{copy.nav.ourWork}</a>
           <a href="/#pricing">{copy.nav.pricing}</a>
           <a href="/about">{copy.nav.about}</a>
           <a href="/#contact">{copy.nav.contact}</a>

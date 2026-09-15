@@ -7,7 +7,7 @@ type NavbarProps = {
   language: Language;
   onLanguageChange: (language: Language) => void;
   copy: {
-    nav: Record<"home" | "services" | "pricing" | "about" | "contact", string>;
+    nav: Record<"home" | "services" | "pricing" | "ourWork" | "about" | "contact", string>;
     common: {
       language: string;
       menu: string;
@@ -19,6 +19,7 @@ type NavbarProps = {
 const navItems = [
   { id: "home", href: "/" },
   { id: "services", href: "/#services" },
+  { id: "ourWork", href: "/our-work" },
   { id: "pricing", href: "/#pricing" },
   { id: "about", href: "/about" },
   { id: "contact", href: "/#contact" },
