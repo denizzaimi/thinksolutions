@@ -108,7 +108,7 @@ export const translations: Record<
     },
     hero: {
       eyebrow: "Digital business solutions",
-      title: "Think smarter. Grow further.",
+      title: "Think smarter.\nGrow further.",
       subtitle: "",
       servicesCta: "Explore Services",
       contactCta: "Let's Work Together",

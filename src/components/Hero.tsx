@@ -32,7 +32,11 @@ export function Hero({ copy }: HeroProps) {
           {copy.eyebrow}
         </motion.p>
         <motion.h1 variants={fadeUp} transition={{ duration: 0.6 }}>
-          {copy.title}
+          {copy.title.split("\n").map((line, index) => (
+            <span key={index} style={{ display: "block" }}>
+              {line}
+            </span>
+          ))}
         </motion.h1>
         <motion.p variants={fadeUp} transition={{ duration: 0.6 }} className="hero__subtitle">
           {copy.subtitle}
