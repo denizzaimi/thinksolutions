@@ -8,6 +8,7 @@ import { useReducedMotion } from "../hooks/useReducedMotion";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { PageHeader } from "./PageHeader";
+import { Contact } from "./Contact";
 
 type ServicePageProps = {
   serviceId: ServiceId;
@@ -111,7 +112,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
           <h2>{detail.ctaTitle}</h2>
           <p>{detail.ctaBody}</p>
           <div className="service-page__cta-actions">
-            <a className="button button--primary" href="/#contact">
+            <a className="button button--primary" href="#contact">
               {copy.nav.contact}
               <ArrowRight size={18} aria-hidden="true" />
             </a>
@@ -120,6 +121,8 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
             </a>
           </div>
         </section>
+
+        <Contact copy={copy} />
       </main>
       <Footer copy={copy} />
     </>

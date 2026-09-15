@@ -15,6 +15,24 @@ export function Contact({ copy }: ContactProps) {
     <section className="section section--contact" id="contact">
       <SectionHeading eyebrow={copy.contact.eyebrow} title={copy.contact.title} align="center" />
 
+      <form className="contact-form" action={`mailto:${CONTACT_EMAIL}`} method="post" encType="text/plain">
+        <label>
+          Name
+          <input type="text" name="name" autoComplete="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autoComplete="email" required />
+        </label>
+        <label className="contact-form__message">
+          Message
+          <textarea name="message" rows={5} required />
+        </label>
+        <button className="button button--primary" type="submit">
+          Send message
+        </button>
+      </form>
+
       <div className="contact-details">
         <a className="contact-details__item" href={`mailto:${CONTACT_EMAIL}`}>
           <Mail size={20} aria-hidden="true" />
