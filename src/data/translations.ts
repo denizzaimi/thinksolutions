@@ -231,7 +231,7 @@ export const translations: Record<
     },
     hero: {
       eyebrow: "Digitale Geschäftslösungen",
-      title: "Klüger denken. Besser bauen. Weiter wachsen.",
+      title: "Klüger denken.\nWeiter wachsen.",
       subtitle: "",
       servicesCta: "Leistungen ansehen",
       contactCta: "Zusammenarbeiten",
@@ -354,7 +354,7 @@ export const translations: Record<
     },
     hero: {
       eyebrow: "Zgjidhje digjitale për biznes",
-      title: "Mendo më zgjuar. Ndërto më mirë. Rritu më tej.",
+      title: "Mendo më zgjuar.\nRritu më tej.",
       subtitle: "",
       servicesCta: "Shiko Shërbimet",
       contactCta: "Të Punojmë Bashkë",
@@ -477,7 +477,7 @@ export const translations: Record<
     },
     hero: {
       eyebrow: "Дигитални бизнис решенија",
-      title: "Размислувај попаметно. Гради подобро. Расти понатаму.",
+      title: "Размислувај попаметно.\nРасти понатаму.",
       subtitle: "",
       servicesCta: "Истражи услуги",
       contactCta: "Да соработуваме",
