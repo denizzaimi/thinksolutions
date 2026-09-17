@@ -232,7 +232,7 @@ export const translations: Record<
     hero: {
       eyebrow: "Digitale Geschäftslösungen",
       title: "Klüger denken. Besser bauen. Weiter wachsen.",
-      subtitle: "Digitale, Design- und Datenlösungen, die auf Ihr Unternehmen abgestimmt sind.",
+      subtitle: "",
       servicesCta: "Leistungen ansehen",
       contactCta: "Zusammenarbeiten",
       brandLine: "DENKEN. DESIGNEN. ANALYSIEREN. WACHSEN.",
@@ -240,7 +240,7 @@ export const translations: Record<
     services: {
       eyebrow: "Leistungen",
       title: "Gezielte digitale Fähigkeiten für wachsende Unternehmen.",
-      intro: "Think Solutions verbindet Web, Design, Daten und praktische Unternehmensunterstützung.",
+      intro: "Think Solutions verbindet Web, Design, Daten und praktische Unterstützung in einem klaren Partner.",
       items: {
         webDesign: {
           title: "Webdesign",
@@ -355,7 +355,7 @@ export const translations: Record<
     hero: {
       eyebrow: "Zgjidhje digjitale për biznes",
       title: "Mendo më zgjuar. Ndërto më mirë. Rritu më tej.",
-      subtitle: "Zgjidhje digjitale, dizajni dhe të dhënash të ndërtuara rreth biznesit tuaj.",
+      subtitle: "",
       servicesCta: "Shiko Shërbimet",
       contactCta: "Të Punojmë Bashkë",
       brandLine: "MENDO. DIZAJNO. ANALIZO. RRITU.",
@@ -363,7 +363,7 @@ export const translations: Record<
     services: {
       eyebrow: "Shërbimet",
       title: "Aftësi digjitale të fokusuara për biznese në rritje.",
-      intro: "Think Solutions bashkon web, dizajn, të dhëna dhe mbështetje praktike biznesi.",
+      intro: "Think Solutions bashkon web, dizajn, të dhëna dhe mbështetje praktike në një partner të qartë.",
       items: {
         webDesign: {
           title: "Web Design",
@@ -478,7 +478,7 @@ export const translations: Record<
     hero: {
       eyebrow: "Дигитални бизнис решенија",
       title: "Размислувај попаметно. Гради подобро. Расти понатаму.",
-      subtitle: "Дигитални, дизајн и дата решенија создадени околу вашиот бизнис.",
+      subtitle: "",
       servicesCta: "Истражи услуги",
       contactCta: "Да соработуваме",
       brandLine: "МИСЛИ. ДИЗАЈНИРАЈ. АНАЛИЗИРАЈ. РАСТИ.",
@@ -486,7 +486,7 @@ export const translations: Record<
     services: {
       eyebrow: "Услуги",
       title: "Фокусирани дигитални способности за бизниси во раст.",
-      intro: "Think Solutions комбинира веб, дизајн, податоци и практична бизнис поддршка.",
+      intro: "Think Solutions комбинира веб, дизајн, податоци и практична поддршка во еден јасен партнер.",
       items: {
         webDesign: {
           title: "Веб дизајн",
