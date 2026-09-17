@@ -44,10 +44,6 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         />
 
         <section className="section service-page__section">
-          <p className="service-page__lead">{detail.intro}</p>
-        </section>
-
-        <section className="section service-page__section">
           <h2 className="service-page__heading">What Think Solutions provides</h2>
           <div className="provides-grid">
             {detail.provides.map((item) => (
