@@ -62,12 +62,12 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
           </div>
         </section>
 
-        <section className="section section--tinted service-page__section">
-          <h2 className="service-page__heading">Main Capabilities</h2>
-          <div className="capability-grid">
+        <section className="section section--dark service-page__section service-page__capabilities">
+          <h2 className="service-page__heading service-page__heading--light">Main Capabilities</h2>
+          <div className="capability-grid capability-grid--dark">
             {detail.capabilities.map((capability, index) => (
               <motion.article
-                className="capability-card"
+                className="capability-card capability-card--dark"
                 key={capability.title}
                 initial={{ opacity: 0, y: reducedMotion ? 0 : 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -88,18 +88,6 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
               <span className="tool-badge" key={tool}>
                 {tool}
               </span>
-            ))}
-          </div>
-        </section>
-
-        <section className="section section--dark service-page__section">
-          <h2 className="service-page__heading service-page__heading--light">Why It Matters for Your Business</h2>
-          <div className="benefit-grid">
-            {detail.benefits.map((benefit) => (
-              <div className="benefit-grid__item" key={benefit}>
-                <span className="benefit-grid__marker" aria-hidden="true" />
-                <p>{benefit}</p>
-              </div>
             ))}
           </div>
         </section>
