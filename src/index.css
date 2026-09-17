@@ -1052,6 +1052,8 @@ img {
 }
 
 .capability-grid--dark {
+  width: min(100%, 1120px);
+  margin: 0 auto;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
@@ -1070,6 +1072,7 @@ img {
 }
 
 .capability-card--dark {
+  padding: 24px 22px;
   border-color: rgba(247, 255, 207, 0.18);
   background: rgba(247, 255, 207, 0.04);
   box-shadow: none;
@@ -1105,6 +1108,7 @@ img {
 }
 
 .capability-card--dark p {
+  max-width: 58ch;
   color: rgba(247, 255, 207, 0.9);
 }
 
