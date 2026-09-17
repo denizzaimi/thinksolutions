@@ -1,9 +1,9 @@
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { services } from "../data/services";
 import { Logo } from "./Logo";
 
 type FooterProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 const CONTACT_EMAIL = "info@thinkofsolutions.com";

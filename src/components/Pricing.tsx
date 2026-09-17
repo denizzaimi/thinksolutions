@@ -1,10 +1,10 @@
 import { pricingPackages } from "../data/pricing";
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { PricingCard } from "./PricingCard";
 import { SectionHeading } from "./SectionHeading";
 
 type PricingProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 export function Pricing({ copy }: PricingProps) {

@@ -1,4 +1,5 @@
 import type { ServiceId } from "./services";
+import type { Language } from "./translations";
 
 export type ServiceDetail = {
   tagline: string;
@@ -11,230 +12,530 @@ export type ServiceDetail = {
   ctaBody: string;
 };
 
-export const serviceDetails: Record<ServiceId, ServiceDetail> = {
-  webDesign: {
-    tagline: "Websites built to represent your business properly, and to keep working after launch.",
-    intro:
-      "A website is usually the first real interaction someone has with your business. Think Solutions designs and builds sites in React that load fast, look right on any screen, and are structured so they can grow as your business does — not a one-off template that gets abandoned after launch.",
-    provides: [
-      "A website built around your actual services, audience and goals — not a generic template with your logo dropped in.",
-      "A responsive layout that works cleanly on phones, tablets and desktops, since most visitors will never see it on a desktop monitor.",
-      "A clear structure that guides visitors toward the action you want — a form, a call, a booking — instead of just presenting information.",
-      "Ongoing care after launch: content updates, small fixes and improvements as your business changes.",
-    ],
-    capabilities: [
-      {
-        title: "Responsive web design",
-        description:
-          "Every page is built to adapt to the device it's viewed on, so navigation, text and images stay usable whether someone lands on a phone or a large monitor.",
-      },
-      {
-        title: "Modern UI/UX",
-        description:
-          "Layouts are planned around how people actually read and scan a page, so the important information and calls-to-action are easy to find rather than buried.",
-      },
-      {
-        title: "Performance optimization",
-        description:
-          "Pages are built lean — optimized images, minimal unnecessary scripts — so the site loads quickly, which matters for both visitors and search ranking.",
-      },
-      {
-        title: "SEO foundations",
-        description:
-          "Page structure, headings, metadata and load speed are handled correctly from the start, giving the site a proper technical foundation to be found on search engines.",
-      },
-      {
-        title: "Custom functionality",
-        description:
-          "Contact forms, service search, interactive sections or anything specific to how your business operates, built directly into the site rather than bolted on.",
-      },
-      {
-        title: "Integrations & deployment",
-        description:
-          "The site is connected to what it needs to be — email, booking tools, analytics — and deployed on reliable infrastructure with a smooth release process.",
-      },
-    ],
-    tools: ["React", "TypeScript", "Responsive Design", "Vite", "SEO", "Performance Optimization"],
-    benefits: [
-      "A site that represents your business credibly from the first visit.",
-      "Fewer visitors lost to slow load times or a broken mobile layout.",
-      "A structure that makes it easier for people to actually contact or buy from you.",
-      "A technical foundation that can be extended instead of rebuilt as you grow.",
-    ],
-    ctaTitle: "Thinking about a new website, or fixing up the one you have?",
-    ctaBody: "Tell us where things stand today and what you need the site to do — we'll take it from there.",
+export const serviceDetails: Record<Language, Record<ServiceId, ServiceDetail>> = {
+  en: {
+    webDesign: {
+      tagline: "Websites built to represent your business properly, and to keep working after launch.",
+      intro:
+        "A website is usually the first real interaction someone has with your business. Think Solutions designs and builds sites in React that load fast, look right on any screen, and are structured so they can grow as your business does — not a one-off template that gets abandoned after launch.",
+      provides: [
+        "A website built around your actual services, audience and goals — not a generic template with your logo dropped in.",
+        "A responsive layout that works cleanly on phones, tablets and desktops, since most visitors will never see it on a desktop monitor.",
+        "A clear structure that guides visitors toward the action you want — a form, a call, a booking — instead of just presenting information.",
+        "Ongoing care after launch: content updates, small fixes and improvements as your business changes.",
+      ],
+      capabilities: [
+        { title: "Responsive web design", description: "Every page is built to adapt to the device it's viewed on, so navigation, text and images stay usable whether someone lands on a phone or a large monitor." },
+        { title: "Modern UI/UX", description: "Layouts are planned around how people actually read and scan a page, so the important information and calls-to-action are easy to find rather than buried." },
+        { title: "Performance optimization", description: "Pages are built lean — optimized images, minimal unnecessary scripts — so the site loads quickly, which matters for both visitors and search ranking." },
+        { title: "SEO foundations", description: "Page structure, headings, metadata and load speed are handled correctly from the start, giving the site a proper technical foundation to be found on search engines." },
+        { title: "Custom functionality", description: "Contact forms, service search, interactive sections or anything specific to how your business operates, built directly into the site rather than bolted on." },
+        { title: "Integrations & deployment", description: "The site is connected to what it needs to be — email, booking tools, analytics — and deployed on reliable infrastructure with a smooth release process." },
+      ],
+      tools: ["React", "TypeScript", "Responsive Design", "Vite", "SEO", "Performance Optimization"],
+      benefits: [
+        "A site that represents your business credibly from the first visit.",
+        "Fewer visitors lost to slow load times or a broken mobile layout.",
+        "A structure that makes it easier for people to actually contact or buy from you.",
+        "A technical foundation that can be extended instead of rebuilt as you grow.",
+      ],
+      ctaTitle: "Thinking about a new website, or fixing up the one you have?",
+      ctaBody: "Tell us where things stand today and what you need the site to do — we'll take it from there.",
+    },
+    socialMedia: {
+      tagline: "A social presence that's planned, consistent, and actually built around your business.",
+      intro:
+        "Posting occasionally isn't a strategy. Think Solutions manages the planning, content and day-to-day presence of your social channels so they build a consistent, recognizable presence for your business instead of going quiet for weeks at a time.",
+      provides: [
+        "A content plan built around what your business actually offers, not generic filler posts.",
+        "Regular management of your channels — posting, scheduling and monitoring — so your presence stays active.",
+        "Content built to fit each platform properly rather than the same post recycled everywhere.",
+        "Reporting on what's working, so decisions are based on results rather than guesswork.",
+      ],
+      capabilities: [
+        { title: "Content strategy", description: "A plan for what to post, how often, and why — built around your business goals rather than trends for their own sake." },
+        { title: "Channel management", description: "Day-to-day handling of Instagram, Facebook and other platforms, including scheduling and basic community responses." },
+        { title: "Growth-focused presence", description: "Content and posting cadence aimed at building an audience that's actually relevant to your business, not just raising follower counts." },
+        { title: "Business presence & consistency", description: "A recognizable look and tone across channels, so your business feels the same wherever someone finds it." },
+      ],
+      tools: ["Instagram", "Facebook", "Content Strategy", "Scheduling & Publishing", "Performance Reporting"],
+      benefits: [
+        "Channels that stay active instead of going stale between posts.",
+        "A consistent brand presence across platforms.",
+        "Content that's actually planned, not improvised the morning it's posted.",
+        "A clearer picture of what content is working, based on real results.",
+      ],
+      ctaTitle: "Want your social channels to actually reflect the business behind them?",
+      ctaBody: "Tell us which platforms matter most to you and what you're currently struggling to keep up with.",
+    },
+    dataSolutions: {
+      tagline: "Turning scattered spreadsheets and systems into numbers you can actually act on.",
+      intro:
+        "Most businesses have the data they need to make better decisions — it's just spread across spreadsheets, exports and systems that don't talk to each other. Think Solutions organizes that data and builds dashboards and reports that make it usable day to day, not just once a year.",
+      provides: [
+        "Dashboards that show the numbers that actually matter to your business, updated and ready to check whenever you need them.",
+        "Clean, organized data instead of scattered spreadsheets that are hard to trust.",
+        "Reports built for the decisions you're actually making — sales, stock, performance — not generic templates.",
+        "Automation of the repetitive parts of reporting, so numbers don't have to be pulled together by hand every time.",
+      ],
+      capabilities: [
+        { title: "Dashboards & reporting", description: "Interactive dashboards built in Power BI or Looker Studio that give you a live view of the numbers that matter, instead of a static report that's outdated the day it's sent." },
+        { title: "Data analysis", description: "Looking past the raw numbers to explain what's actually happening in the business — trends, patterns, and what's driving them." },
+        { title: "Database management", description: "Structuring and maintaining data in MySQL or SQL so it stays accurate, organized and easy to query as it grows." },
+        { title: "Business insights", description: "Translating data into plain conclusions — what's working, what isn't, and where to focus — rather than leaving you to interpret raw charts." },
+        { title: "Automation", description: "Setting up recurring reports and data pipelines so routine numbers update themselves instead of needing to be rebuilt by hand each time." },
+      ],
+      tools: ["Power BI", "Microsoft Excel", "MySQL", "SQL", "Looker Studio", "Dashboards & Reporting"],
+      benefits: [
+        "Decisions based on current numbers instead of gut feeling or outdated spreadsheets.",
+        "Hours saved each month on manually pulling reports together.",
+        "A single, trustworthy source for the numbers that matter to your business.",
+        "Early visibility into problems or opportunities, instead of finding them too late.",
+      ],
+      ctaTitle: "Sitting on data you're not really using yet?",
+      ctaBody: "Tell us what systems or spreadsheets you're working with and what you wish you could see clearly.",
+    },
+    uiUxGraphic: {
+      tagline: "Design that looks professional and is actually built around how people use it.",
+      intro:
+        "Good design isn't just about looking polished — it's about making something easy to use and consistent across everywhere your business shows up. Think Solutions handles UI/UX for digital products and the graphic design your business needs day to day, from interfaces to social content.",
+      provides: [
+        "Interface design for websites and apps that's planned around how people actually navigate, not just visually styled after the fact.",
+        "Social media graphics and visuals that are consistent with your brand across every platform.",
+        "A visual identity that looks the same whether someone sees it on your site, your socials, or printed material.",
+        "Design files and assets you actually own and can reuse going forward.",
+      ],
+      capabilities: [
+        { title: "UI/UX design", description: "Planning how a user moves through an interface, then designing it so the experience is intuitive, not just visually appealing." },
+        { title: "Graphic design", description: "Design work for social posts, marketing material and business visuals, all built to a consistent standard." },
+        { title: "Social media graphics", description: "Templates and one-off visuals sized and styled correctly for each platform, keeping your feed cohesive." },
+        { title: "Business visuals", description: "Everyday design needs — presentations, one-pagers, simple brand assets — handled to a professional standard." },
+      ],
+      tools: ["Figma", "Canva", "UI/UX Design", "Brand Visuals", "Social Graphics"],
+      benefits: [
+        "A consistent, professional look across your website, socials and materials.",
+        "Interfaces that are easier for people to actually use, not just look at.",
+        "Less time spent trying to design things in-house without the right tools or experience.",
+        "A visual identity you can keep reusing rather than starting over each time.",
+      ],
+      ctaTitle: "Need design work that actually looks and feels consistent?",
+      ctaBody: "Share what you're working on — a site, a set of social posts, a full visual identity — and we'll go from there.",
+    },
+    businessSupport: {
+      tagline: "Practical digital help for the parts of the business that don't fit neatly anywhere else.",
+      intro:
+        "Not every business need fits neatly into 'website' or 'data' or 'design'. Think Solutions provides practical, tailored digital support for the everyday processes and problems businesses run into — the kind of work that quietly saves time once it's sorted out.",
+      provides: [
+        "Help identifying where digital tools could actually save you time, rather than adding more complexity.",
+        "Practical solutions built around how your business currently operates, not a rigid one-size-fits-all package.",
+        "Support with the processes that tend to get overlooked — file organization, basic workflow tools, small custom fixes.",
+        "A responsive partner for digital problems that don't have an obvious owner internally.",
+      ],
+      capabilities: [
+        { title: "Digital business support", description: "General, hands-on help with the digital side of running a business, wherever the gap happens to be." },
+        { title: "Process improvement", description: "Looking at how something is currently done and finding a more efficient, less manual way to do it." },
+        { title: "Practical digital solutions", description: "Small, focused tools or fixes built for a specific problem, rather than an oversized system you don't need." },
+        { title: "Tailored solutions", description: "Support shaped around your business specifically, since 'business support' looks different for every client." },
+      ],
+      tools: ["Process Improvement", "Workflow Tools", "Custom Solutions", "Digital Operations"],
+      benefits: [
+        "Less time lost to manual, repetitive digital tasks.",
+        "A clearer, more organized way of handling day-to-day digital work.",
+        "A partner to bring in when a problem doesn't fit neatly into another category.",
+        "Solutions built for how your business actually works, not a generic playbook.",
+      ],
+      ctaTitle: "Got a digital headache that doesn't fit anywhere else?",
+      ctaBody: "Describe the problem as plainly as you'd like — we'll tell you honestly whether we're the right fit to help.",
+    },
   },
-  socialMedia: {
-    tagline: "A social presence that's planned, consistent, and actually built around your business.",
-    intro:
-      "Posting occasionally isn't a strategy. Think Solutions manages the planning, content and day-to-day presence of your social channels so they build a consistent, recognizable presence for your business instead of going quiet for weeks at a time.",
-    provides: [
-      "A content plan built around what your business actually offers, not generic filler posts.",
-      "Regular management of your channels — posting, scheduling and monitoring — so your presence stays active.",
-      "Content built to fit each platform properly rather than the same post recycled everywhere.",
-      "Reporting on what's working, so decisions are based on results rather than guesswork.",
-    ],
-    capabilities: [
-      {
-        title: "Content strategy",
-        description:
-          "A plan for what to post, how often, and why — built around your business goals rather than trends for their own sake.",
-      },
-      {
-        title: "Channel management",
-        description:
-          "Day-to-day handling of Instagram, Facebook and other platforms, including scheduling and basic community responses.",
-      },
-      {
-        title: "Growth-focused presence",
-        description:
-          "Content and posting cadence aimed at building an audience that's actually relevant to your business, not just raising follower counts.",
-      },
-      {
-        title: "Business presence & consistency",
-        description:
-          "A recognizable look and tone across channels, so your business feels the same wherever someone finds it.",
-      },
-    ],
-    tools: ["Instagram", "Facebook", "Content Strategy", "Scheduling & Publishing", "Performance Reporting"],
-    benefits: [
-      "Channels that stay active instead of going stale between posts.",
-      "A consistent brand presence across platforms.",
-      "Content that's actually planned, not improvised the morning it's posted.",
-      "A clearer picture of what content is working, based on real results.",
-    ],
-    ctaTitle: "Want your social channels to actually reflect the business behind them?",
-    ctaBody: "Tell us which platforms matter most to you and what you're currently struggling to keep up with.",
+  de: {
+    webDesign: {
+      tagline: "Websites, die Ihr Unternehmen sauber repräsentieren und auch nach dem Launch weiter funktionieren.",
+      intro: "Eine Website ist oft die erste echte Begegnung mit Ihrem Unternehmen. Think Solutions entwirft und baut Websites in React, die schnell laden, auf jedem Bildschirm gut aussehen und so aufgebaut sind, dass sie mit Ihrem Unternehmen wachsen — nicht nur ein einmaliges Template, das nach dem Launch vernachlässigt wird.",
+      provides: [
+        "Eine Website, die zu Ihren echten Services, Ihrer Zielgruppe und Ihren Zielen passt — nicht nur eine generische Vorlage mit Ihrem Logo.",
+        "Ein responsives Layout, das auf Telefonen, Tablets und Desktops sauber funktioniert, weil die meisten Besucher sie nie am Desktop sehen.",
+        "Eine klare Struktur, die Besucher gezielt zu der gewünschten Aktion führt — Formular, Anruf, Buchung — statt nur Informationen zu zeigen.",
+        "Kontinuierliche Betreuung nach dem Launch: Inhaltsaktualisierungen, kleine Korrekturen und Verbesserungen, wenn sich Ihr Unternehmen verändert.",
+      ],
+      capabilities: [
+        { title: "Responsives Webdesign", description: "Jede Seite passt sich dem Gerät an, damit Navigation, Text und Bilder auf Smartphone oder großem Bildschirm gut nutzbar bleiben." },
+        { title: "Modernes UI/UX", description: "Layouts werden so geplant, dass wichtige Informationen und Calls-to-Action leicht gefunden werden und nicht im Text untergehen." },
+        { title: "Performance-Optimierung", description: "Seiten werden leicht und schnell gebaut — optimierte Bilder, minimale Scripts — damit die Website schnell lädt und besser für Besucher und Suchmaschinen ist." },
+        { title: "SEO-Grundlagen", description: "Seitenstruktur, Überschriften, Metadaten und Ladezeit werden von Anfang an sauber aufgebaut, damit die Website technisch gut auffindbar ist." },
+        { title: "Individuelle Funktionen", description: "Kontaktformulare, Service-Suche, interaktive Bereiche und individuelle Anforderungen werden direkt in die Website eingebaut, statt nur angehängt zu werden." },
+        { title: "Integrationen & Deployment", description: "Die Website wird mit allem verbunden, was sie braucht — E-Mail, Buchungstools, Analytics — und zuverlässig bereitgestellt." },
+      ],
+      tools: ["React", "TypeScript", "Responsive Design", "Vite", "SEO", "Performance Optimization"],
+      benefits: [
+        "Eine Website, die Ihr Unternehmen bereits beim ersten Besuch glaubwürdig repräsentiert.",
+        "Weniger Besucher, die durch langsame Ladezeiten oder schlechtes Mobile Layout verloren gehen.",
+        "Eine klare Struktur, die es einfacher macht, Kontakt aufzunehmen oder zu kaufen.",
+        "Eine technische Grundlage, die wachsen kann, statt bei Wachstum neu aufgebaut werden zu müssen.",
+      ],
+      ctaTitle: "Überlegen Sie eine neue Website oder eine Verbesserung der bestehenden?",
+      ctaBody: "Sagen Sie uns, wie die Situation heute aussieht und was die Website leisten soll — wir übernehmen den Rest.",
+    },
+    socialMedia: {
+      tagline: "Eine Social-Media-Präsenz, die geplant, konsistent und wirklich auf Ihr Unternehmen abgestimmt ist.",
+      intro: "Gelegentliches Posten ist keine Strategie. Think Solutions übernimmt Planung, Content und tägliche Präsenz auf Ihren sozialen Kanälen, damit Ihre Marke konsistent und erkennbar bleibt statt Wochenlang inaktiv zu sein.",
+      provides: [
+        "Ein Content-Plan, der zu dem passt, was Ihr Unternehmen wirklich anbietet, statt generischen Füllposts.",
+        "Regelmäßiges Management Ihrer Kanäle — Posten, Planen, Überwachen — damit Ihre Präsenz aktiv bleibt.",
+        "Inhalte, die zu jeder Plattform passen, statt dieselben Posts überall wiederzuverwenden.",
+        "Berichte darüber, was funktioniert, damit Entscheidungen auf Ergebnissen und nicht auf Vermutungen basieren.",
+      ],
+      capabilities: [
+        { title: "Content-Strategie", description: "Ein Plan, was, wie oft und warum gepostet wird — auf die Ziele Ihres Unternehmens ausgerichtet statt auf Trends allein." },
+        { title: "Kanalmanagement", description: "Tägliche Pflege von Instagram, Facebook und anderen Plattformen inklusive Planung und einfacher Community-Antworten." },
+        { title: "Wachstumsorientierte Präsenz", description: "Inhalte und Posting-Frequenz, die ein relevantes Publikum aufbauen und nicht nur Follower-Zahlen erhöhen." },
+        { title: "Geschäftspräsenz & Konsistenz", description: "Ein einheitlicher Look und Ton über alle Kanäle hinweg, damit Ihr Unternehmen überall gleich wirkt." },
+      ],
+      tools: ["Instagram", "Facebook", "Content-Strategie", "Planung & Veröffentlichung", "Performance-Reporting"],
+      benefits: [
+        "Kanäle, die aktiv bleiben statt zwischen Posts zu verfallen.",
+        "Eine konsistente Markenpräsenz über Plattformen hinweg.",
+        "Content, der tatsächlich geplant und nicht am Morgen des Postens improvisiert wird.",
+        "Mehr Klarheit darüber, welche Inhalte funktionieren, basierend auf echten Ergebnissen.",
+      ],
+      ctaTitle: "Sollten Ihre sozialen Kanäle das Unternehmen hinter ihnen wirklich widerspiegeln?",
+      ctaBody: "Sagen Sie uns, welche Plattformen für Sie wichtig sind und woran Sie aktuell am meisten hängen.",
+    },
+    dataSolutions: {
+      tagline: "Aus verstreuten Tabellen und Systemen aussagekräftige Zahlen machen, auf die man handeln kann.",
+      intro: "Die meisten Unternehmen haben die Daten, die sie für bessere Entscheidungen brauchen — sie liegen nur in Tabellen, Exports und Systemen verteilt und sprechen nicht miteinander. Think Solutions ordnet diese Daten und baut Dashboards und Berichte, die im Alltag nutzbar sind, nicht nur einmal im Jahr.",
+      provides: [
+        "Dashboards, die die Zahlen zeigen, die für Ihr Unternehmen wirklich wichtig sind und jederzeit geprüft werden können.",
+        "Saubere, organisierte Daten statt verstreuter Tabellen, denen kaum zu trauen ist.",
+        "Berichte für die Entscheidungen, die Sie wirklich treffen — Umsatz, Lager, Performance — statt generischer Templates.",
+        "Automatisierung der wiederkehrenden Berichtsarbeit, damit Zahlen nicht jedes Mal von Hand zusammengetragen werden müssen.",
+      ],
+      capabilities: [
+        { title: "Dashboards & Reporting", description: "Interaktive Dashboards in Power BI oder Looker Studio mit Live-Daten statt statischer Berichte, die am Tag der Zusendung schon veraltet sind." },
+        { title: "Datenanalyse", description: "Über die Rohzahlen hinaus erklären, was im Unternehmen wirklich passiert — Trends, Muster und Ursachen." },
+        { title: "Datenbankmanagement", description: "Strukturierung und Pflege von Daten in MySQL oder SQL, damit sie sauber, organisiert und skalierbar bleiben." },
+        { title: "Geschäftsanalysen", description: "Daten in verständliche Schlüsse übersetzen — was funktioniert, was nicht und worauf man sich fokussieren sollte." },
+        { title: "Automatisierung", description: "Einrichtung wiederkehrender Berichte und Datenpipelines, damit Routinezahlen automatisch aktualisiert werden." },
+      ],
+      tools: ["Power BI", "Microsoft Excel", "MySQL", "SQL", "Looker Studio", "Dashboards & Reporting"],
+      benefits: [
+        "Entscheidungen auf Basis aktueller Zahlen statt Bauchgefühl oder veralteter Tabellen.",
+        "Stunden gespart pro Monat durch manuelles Zusammenstellen von Reports.",
+        "Eine verlässliche Quelle für die Zahlen, die für Ihr Unternehmen wirklich wichtig sind.",
+        "Frühzeitige Sicht auf Probleme und Chancen statt zu spät darauf zu reagieren.",
+      ],
+      ctaTitle: "Haben Sie Daten, die Sie noch nicht wirklich nutzen?",
+      ctaBody: "Sagen Sie uns, welche Systeme oder Tabellen Sie nutzen und was Sie klarer sehen möchten.",
+    },
+    uiUxGraphic: {
+      tagline: "Design, das professionell wirkt und wirklich am Nutzerverhalten ausgerichtet ist.",
+      intro: "Gutes Design ist nicht nur optisch schön — es macht Dinge leichter nutzbar und konsistent überall dort, wo Ihr Unternehmen auftaucht. Think Solutions übernimmt UI/UX und Grafikdesign für digitale Produkte und tägliche Unternehmensvisuals.",
+      provides: [
+        "Interface-Design für Websites und Apps, das auf die tatsächlichen Nutzerwege abgestimmt ist und nicht nur nachträglich gestylt wurde.",
+        "Social-Media-Grafiken und Visuals, die über alle Kanäle hinweg konsistent zur Marke passen.",
+        "Eine visuelle Identität, die überall gleich wirkt — auf der Website, in sozialen Medien und im gedruckten Material.",
+        "Design-Dateien und Assets, die Sie wirklich besitzen und künftig wiederverwenden können.",
+      ],
+      capabilities: [
+        { title: "UI/UX-Design", description: "Planung, wie ein Nutzer durch eine Oberfläche navigiert und wie die Erfahrung intuitiv, nicht nur schön wirkt." },
+        { title: "Grafikdesign", description: "Design für Social Posts, Marketingmaterial und Unternehmensvisuals, alles in einem konsistenten Stil." },
+        { title: "Social-Media-Grafiken", description: "Vorlagen und Einzelvisuals, passend für jede Plattform, damit der Feed zusammenpasst." },
+        { title: "Business Visuals", description: "Alltägliche Designbedürfnisse — Präsentationen, One-Pager, einfache Markenassets — professionell umgesetzt." },
+      ],
+      tools: ["Figma", "Canva", "UI/UX Design", "Brand Visuals", "Social Graphics"],
+      benefits: [
+        "Ein konsistenter, professioneller Look über Website, Socials und Materialien hinweg.",
+        "Schnittstellen, die leichter zu bedienen sind und nicht nur gut aussehen.",
+        "Weniger Zeit, die man intern für Design aufbringen muss, ohne die richtigen Tools oder Erfahrung zu haben.",
+        "Eine visuelle Identität, die man immer wieder nutzen kann, statt jedes Mal neu zu beginnen.",
+      ],
+      ctaTitle: "Brauchen Sie Designarbeit, die wirklich konsistent wirkt und fühlt?",
+      ctaBody: "Teilen Sie uns mit, woran Sie arbeiten — Website, Social Posts, komplette visuelle Identität — und wir gehen gemeinsam weiter.",
+    },
+    businessSupport: {
+      tagline: "Praktische digitale Hilfe für die Bereiche eines Unternehmens, die nirgends sauber reinpassen.",
+      intro: "Nicht jede Geschäftsanforderung passt sauber in 'Website', 'Daten' oder 'Design'. Think Solutions bietet praktische, individuelle digitale Unterstützung für alltägliche Prozesse und Probleme, die Unternehmen haben — genau die Arbeit, die im Hintergrund Zeit spart, sobald sie gelöst ist.",
+      provides: [
+        "Hilfe dabei, zu erkennen, wo digitale Tools tatsächlich Zeit sparen, statt nur mehr Komplexität zu erzeugen.",
+        "Praktische Lösungen, die auf die tatsächlichen Arbeitsprozesse Ihres Unternehmens abgestimmt sind, nicht auf ein starres Standardpaket.",
+        "Unterstützung bei Prozessen, die leicht übersehen werden — Dateiorganisation, einfache Workflow-Tools, kleine individuelle Fixes.",
+        "Ein responsiver Partner für digitale Probleme, die intern niemand eindeutig besitzt.",
+      ],
+      capabilities: [
+        { title: "Digitaler Business Support", description: "Praktische Hilfe bei der digitalen Seite des Unternehmens, wo auch immer die Lücke entsteht." },
+        { title: "Prozessverbesserung", description: "Analyse der aktuellen Umsetzung und finden eines effizienteren, weniger manuellen Weges." },
+        { title: "Praktische digitale Lösungen", description: "Kleine, fokussierte Tools oder Korrekturen für ein konkretes Problem statt eines überdimensionierten Systems." },
+        { title: "Individuelle Lösungen", description: "Unterstützung, die genau auf Ihr Unternehmen zugeschnitten ist, da 'Business Support' für jeden Kunden anders aussieht." },
+      ],
+      tools: ["Prozessverbesserung", "Workflow-Tools", "Individuelle Lösungen", "Digitale Operationen"],
+      benefits: [
+        "Weniger Zeitverlust durch manuelle, repetitive digitale Aufgaben.",
+        "Ein klarerer, organisierterer Umgang mit dem täglichen digitalen Arbeiten.",
+        "Ein Partner, der hinzugezogen wird, wenn ein Problem in keine andere Kategorie passt.",
+        "Lösungen, die wirklich zu Ihrem Unternehmen passen und nicht zu einem generischen Standardpaket.",
+      ],
+      ctaTitle: "Haben Sie ein digitales Problem, das nirgends richtig reinpasst?",
+      ctaBody: "Beschreiben Sie das Problem so einfach wie Sie möchten — wir sagen Ihnen ehrlich, ob wir die richtige Hilfe dafür sind.",
+    },
   },
-  dataSolutions: {
-    tagline: "Turning scattered spreadsheets and systems into numbers you can actually act on.",
-    intro:
-      "Most businesses have the data they need to make better decisions — it's just spread across spreadsheets, exports and systems that don't talk to each other. Think Solutions organizes that data and builds dashboards and reports that make it usable day to day, not just once a year.",
-    provides: [
-      "Dashboards that show the numbers that actually matter to your business, updated and ready to check whenever you need them.",
-      "Clean, organized data instead of scattered spreadsheets that are hard to trust.",
-      "Reports built for the decisions you're actually making — sales, stock, performance — not generic templates.",
-      "Automation of the repetitive parts of reporting, so numbers don't have to be pulled together by hand every time.",
-    ],
-    capabilities: [
-      {
-        title: "Dashboards & reporting",
-        description:
-          "Interactive dashboards built in Power BI or Looker Studio that give you a live view of the numbers that matter, instead of a static report that's outdated the day it's sent.",
-      },
-      {
-        title: "Data analysis",
-        description:
-          "Looking past the raw numbers to explain what's actually happening in the business — trends, patterns, and what's driving them.",
-      },
-      {
-        title: "Database management",
-        description:
-          "Structuring and maintaining data in MySQL or SQL so it stays accurate, organized and easy to query as it grows.",
-      },
-      {
-        title: "Business insights",
-        description:
-          "Translating data into plain conclusions — what's working, what isn't, and where to focus — rather than leaving you to interpret raw charts.",
-      },
-      {
-        title: "Automation",
-        description:
-          "Setting up recurring reports and data pipelines so routine numbers update themselves instead of needing to be rebuilt by hand each time.",
-      },
-    ],
-    tools: ["Power BI", "Microsoft Excel", "MySQL", "SQL", "Looker Studio", "Dashboards & Reporting"],
-    benefits: [
-      "Decisions based on current numbers instead of gut feeling or outdated spreadsheets.",
-      "Hours saved each month on manually pulling reports together.",
-      "A single, trustworthy source for the numbers that matter to your business.",
-      "Early visibility into problems or opportunities, instead of finding them too late.",
-    ],
-    ctaTitle: "Sitting on data you're not really using yet?",
-    ctaBody: "Tell us what systems or spreadsheets you're working with and what you wish you could see clearly.",
+  sq: {
+    webDesign: {
+      tagline: "Faqe interneti të ndërtuara për të përfaqësuar biznesin tuaj si duhet dhe për të vazhduar të funksionojnë pas lançimit.",
+      intro: "Një faqe interneti shpesh është interaksioni i parë real me biznesin tuaj. Think Solutions dizajnë dhe ndërtuese faqe në React që ngarkohen shpejt, duken mirë në çdo ekran dhe janë të strukturuara për të rritur me biznesin tuaj — jo një template i një herë që lihet pas lançimit.",
+      provides: [
+        "Një faqe e ndërtuar rreth shërbimeve, audiencës dhe qëllimeve tuaja — jo një template i përgjithshëm me logo të vendosur thjesht.",
+        "Një layout i përgjegjshëm që funksionon qartë në telefon, tablet dhe desktop, pasi shumica e vizitorëve nuk do ta shohin kurrë në desktop.",
+        "Një strukturë e qartë që udhëzon vizitorët drejt veprimit që dëshironi — formular, telefonatë, rezervim — në vend që vetëm të paraqesë informacion.",
+        "Mbështetje e vazhdueshme pas lançimit: përditësime përmbajtjesh, korrigjime të vogla dhe përmirësime që i përshtaten biznesit tuaj.",
+      ],
+      capabilities: [
+        { title: "Web dizajn responsiv", description: "Çdo faqe është e ndërtuar për të përshtatur me pajisjen ku shikohet, kështu që navigimi, teksti dhe imazhet mbesin të përdorshëm në telefon ose ekran të madh." },
+        { title: "UI/UX modern", description: "Layout-et planifikohen sipas mënyrës se si njerëzit lexojnë dhe skanojnë faqet, kështu që informacioni i rëndësishëm dhe call-to-action janë të lehtë për t'u gjetur." },
+        { title: "Optimizim i performancës", description: "Faqet janë të ndërtuara të lehta — imazhe të optimizuara, scriptet e panevojshme të minimizuara — kështu që faqja ngarkohet shpejt." },
+        { title: "Tema SEO", description: "Struktura e faqes, titujt, metadata dhe shpejtësia e ngarkimit menaxhohen mirë nga fillimi, duke i dhënë faqes një themel teknike të fortë për t'u gjetur në motorët e kërkimit." },
+        { title: "Funksionalitete të personalizuara", description: "Formulare kontakt, kërkim shërbimesh, seksione interaktive dhe çdo gjë e veçantë sipas mënyrës se si funksionon biznesi juaj." },
+        { title: "Integrime & deploy", description: "Faqja lidhet me ato që i duhen — email, vegla rezervimi, analytics — dhe deployohet në infrastrukturë të besueshme me një proces të qetë publike." },
+      ],
+      tools: ["React", "TypeScript", "Responsive Design", "Vite", "SEO", "Performance Optimization"],
+      benefits: [
+        "Një faqe që përfaqëson biznesin tuaj me kredibilitet që nga vizita e parë.",
+        "Më pak vizitorë të humbur nga ngarkimi i ngadaltë ose layout-i i dobët mobil.",
+        "Një strukturë e qartë që e bën më të lehtë kontaktin ose blerjen nga ana e klientit.",
+        "Një themel teknologjik që mund të zgjerohet, në vend që të rindërtohet sapo të rritet biznesi.",
+      ],
+      ctaTitle: "Po mendoni për një faqe të re, ose përmirësim të faqes ekzistuese?",
+      ctaBody: "Na tregoni se ku ndodhet gjendja aktuale dhe çfarë duhet të bëjë faqja — ne do ta marrim me rrugë pasues.",
+    },
+    socialMedia: {
+      tagline: "Një praninë sociale e planifikuar, e qëndrueshme dhe e ndërtuar rreth biznesit tuaj.",
+      intro: "Postimi rastësisht nuk është strategji. Think Solutions menaxhon planifikimin, përmbajtjen dhe praninë e përditshme në kanalet tuaja sociale, kështu që ato ndërtojnë një praninë të qëndrueshme dhe të njohur për biznesin tuaj në vend që të mbeten të heshtura për javë të tëra.",
+      provides: [
+        "Një plan përmbajtjesh i bërë rreth asaj që biznesi juaj ofron realisht, jo postime të përgjithshme pa vlerë.",
+        "Menaxhim i rregullt i kanalëve — postim, planifikim dhe monitorim — për të mbajtur praninë aktive.",
+        "Përmbajtje e bërë për çdo platformë në mënyrë të duhur, në vend që të jetë e njëjta postim i ripërdorur kudo.",
+        "Raporte mbi atë që funksionon, në mënyrë që vendimet të bazohen në rezultate dhe jo në hamendje.",
+      ],
+      capabilities: [
+        { title: "Strategji përmbajtjeje", description: "Një plan për çfarë të postosh, sa shpesh dhe pse — i ndërtuar rreth objektivave të biznesit tuaj, jo sipas tendencave pa kuptim." },
+        { title: "Menaxhim kanalesh", description: "Trajtim i përditshëm i Instagram, Facebook dhe platformave të tjera, duke përfshirë planifikimin dhe përgjigjet bazë komunitare." },
+        { title: "Prani e fokusuar në rritje", description: "Përmbajtje dhe frekuencë postimi të krijuara për të ndërtuar një audiencë reale dhe relevante, jo vetëm për të rritur numrin e ndjekësve." },
+        { title: "Prania dhe konsistenca e biznesit", description: "Një pamje dhe ton i njohur në të gjitha kanalet, që e bën biznesin të duket i njëjtë kudo ku gjendet." },
+      ],
+      tools: ["Instagram", "Facebook", "Content Strategy", "Scheduling & Publishing", "Performance Reporting"],
+      benefits: [
+        "Kanalet që mbeten aktive në vend që të kalben midis postimeve.",
+        "Një praninë e qëndrueshme marke në platforma të ndryshme.",
+        "Përmbajtje që është e planifikuar, jo e improvizuar në momentin e postimit.",
+        "Një pamje më e qartë e asaj që po funksionon, bazuar në rezultate reale.",
+      ],
+      ctaTitle: "Dëshironi që kanalet tuaja sociale të pasqyrojnë realisht biznesin pas tyre?",
+      ctaBody: "Na tregoni cilat platforma janë më të rëndësishme për ju dhe me çfarë po luftoni aktualisht.",
+    },
+    dataSolutions: {
+      tagline: "Shndërrimi i spreadsheet-ave dhe sistemeve të shpërndara në numra që vërtet mund të veproni mbi to.",
+      intro: "Shumë biznese kanë të dhënat që u nevojiten për të bërë vendime më të mira — ato janë vetëm të shpërndara në spreadsheet, eksport dhe sisteme që nuk komunikojnë me njëra-tjetrën. Think Solutions i rregullon këto të dhëna dhe ndërton dashboard-e dhe raporte që i bëjnë ato të përdorshme çdo ditë, jo vetëm një herë në vit.",
+      provides: [
+        "Dashboard-e që tregojnë numrat që kanë vlerë për biznesin tuaj, të përditësuar dhe të gatshëm për tu kontrolluar sa herë të duan.",
+        "Të dhëna të pastra dhe të organizuara, në vend të spreadsheet-eve të shpërndara që është e vështirë t'i besosh.",
+        "Raporte të ndërtuara për vendimet që bënit vërtet — shitje, stoqe, performancë — jo template të përgjithshme.",
+        "Automatizim i pjesëve repetitive të raportimit, kështu që numrat nuk duhen mbledhur me dorë çdo herë.",
+      ],
+      capabilities: [
+        { title: "Dashboards & raportim", description: "Dashboard-e interaktive të ndërtuara në Power BI ose Looker Studio që japin një pamje të menjëhershme të numrave të rëndësishëm, në vend të raporteve statike që bëhen të vjetra menjëherë." },
+        { title: "Analizë e të dhënave", description: "Shikimi përtej numrave të papërpunuar për të shpjeguar se çfarë ndodh në të vërtetë në biznes — tendenca, modelet dhe ajo që i shtyn ato." },
+        { title: "Menaxhimi i bazës së të dhënave", description: "Strukturimi dhe mirëmbajtja e të dhënave në MySQL ose SQL, kështu që mbesin të sakta, të organizuara dhe të lehta për t'u pyetur me kalimin e kohës." },
+        { title: "Insight biznesi", description: "Përkthimi i të dhënave në përfundime të qarta — çfarë funksionon, çfarë jo dhe ku të fokusohet — në vend që t'i lini ju të interpretoni diagramet e papërpunuara." },
+        { title: "Automatizim", description: "Vendosja e raporteve të përsëritura dhe pipeline-ve të të dhënave, kështu që numrat rutinë përditësohen automatikisht." },
+      ],
+      tools: ["Power BI", "Microsoft Excel", "MySQL", "SQL", "Looker Studio", "Dashboards & Reporting"],
+      benefits: [
+        "Vendime bazuar në numra aktualë në vend të ndjenjës ose spreadsheet-eve të vjetra.",
+        "Orë të shpëtuara çdo muaj duke mbledhur raporte manualisht.",
+        "Një burim i vetëm dhe i besueshëm për numrat që kanë rëndësi për biznesin tuaj.",
+        "Shikim i hershëm për problemet ose mundësitë, në vend që t'i gjeni shumë vonë.",
+      ],
+      ctaTitle: "Po mbani të dhëna që nuk i përdorni vërtet ende?",
+      ctaBody: "Na tregoni cilat sisteme ose spreadsheet përdorni dhe çfarë dëshironi të shihni më qartë.",
+    },
+    uiUxGraphic: {
+      tagline: "Dizajn që duket profesional dhe është ndërtuar realisht rreth mënyrës se si njerëzit e përdorin atë.",
+      intro: "Dizajn i mirë nuk është vetëm i bukur — është një gjë e lehtë për t'u përdorur dhe e qëndrueshme kudo ku shfaqet biznesi juaj. Think Solutions menaxhon UI/UX për produkte dixhitale dhe dizajn grafik të nevojshëm çdo ditë, nga ndërfaqet te përmbajtja sociale.",
+      provides: [
+        "Dizajn ndërfaqesh për faqe dhe aplikacione të planifikuara sipas mënyrës se si njerëzit lëvizin realisht, jo vetëm të stilizuara pas fakteve.",
+        "Grafika dhe vizuale për rrjete sociale që janë konsistente me markën tuaj në çdo platformë.",
+        "Një identitet vizual që duket i njëjtë pavarësisht se ku e shikon dikush — në uebsit, rrjete sociale ose materiale të shtypura.",
+        "Skeda dizajni dhe asetet që ju i keni vërtet dhe mund t'i ripërdorni vazhdimisht.",
+      ],
+      capabilities: [
+        { title: "UI/UX dizajn", description: "Planifikimi i mënyrës se si një përdorues kalon nëpër një ndërfaqe, dhe dizajnimi i saj që eksperienca të jetë intuitive, jo vetëm vizualisht erësore." },
+        { title: "Dizajn grafik", description: "Punë dizajni për postime sociale, material marketingu dhe vizuale biznesi, të gjitha të ndërtuara me standard të njëjtë." },
+        { title: "Grafika sociale", description: "Shabllone dhe vizuale individuale të dimensionuara dhe stilizuara saktësisht për çdo platformë, duke mbajtur feed-in koheziv." },
+        { title: "Vizuale biznesi", description: "Nevojat e përditshme të dizajnit — prezentime, one-pagers, aktive të thjeshta marke — të trajtuara me standard profesionist." },
+      ],
+      tools: ["Figma", "Canva", "UI/UX Design", "Brand Visuals", "Social Graphics"],
+      benefits: [
+        "Një pamje e qëndrueshme, profesionale në ueb, rrjete sociale dhe materiale.",
+        "Ndërfaqe më të lehta për t'u përdorur, jo vetëm për t'u parë.",
+        "Më pak kohë e shpenzuar në dizajn të brendshëm pa mjetet dhe përvojën e duhur.",
+        "Një identitet vizual që mund ta ripërdorni vazhdimisht, në vend që të filloni përsëri çdo herë.",
+      ],
+      ctaTitle: "Ju nevojitet punë dizajni që vërtet duket dhe ndjehet e qëndrueshme?",
+      ctaBody: "Ndani me ne se në çfarë po punoni — një sit, një grup postimesh, një identitet vizual i plotë — dhe ne do të vazhdojmë prej andej.",
+    },
+    businessSupport: {
+      tagline: "Ndihmë e dobishme digitale për pjesët e biznesit që nuk përshtaten në mënyrë të qartë diku tjetër.",
+      intro: "Jo çdo nevojë biznesi përshtatet qartë në 'website', 'data' ose 'design'. Think Solutions ofron mbështetje praktike, të përshtatur digjitale për procese ditore dhe problemet që hasin bizneset — lloji i punës që kursen kohë pa u dëgjuar shumë.",
+      provides: [
+        "Ndihmë për të identifikuar ku mjete dixhitale mund të kursejnë kohë, në vend që të shtojnë thjesht kompleksitet.",
+        "Zgjidhje praktike të ndërtuara rreth mënyrës se si funksionon biznesi juaj aktualisht, jo një paketë të ngurtë një-madhësi-everyone.",
+        "Mbështetje me procese që priren të anashkalohen — organizimi i skedarëve, vegla bazë workflow, korrigjime të vogla.",
+        "Një partner reaktiv për problemet digitale që nuk kanë pronar të qartë brenda.",
+      ],
+      capabilities: [
+        { title: "Mbështetje dixhitale për biznes", description: "Ndihmë e përgjithshme, e duhur me dorë, për anën dixhitale të drejimit të biznesit, kudo të ndodhë hendeku." },
+        { title: "Përmirësim procesesh", description: "Shikimi i asaj se si diçka po bëhet aktualisht dhe gjetja e një mënyre më efikase, më pak manuale." },
+        { title: "Zgjidhje praktike dixhitale", description: "Vegla të vogla, të fokusuara ose korrigjime për një problem të caktuar, në vend të një sistemi shumë të madh që nuk keni nevojë." },
+        { title: "Zgjidhje të personalizuara", description: "Mbështetje e formuar rreth biznesit tuaj specifik, pasi 'business support' duket ndryshe për çdo klient." },
+      ],
+      tools: ["Process Improvement", "Workflow Tools", "Custom Solutions", "Digital Operations"],
+      benefits: [
+        "Më pak kohë e humbur në detyra dixhitale manuale dhe repetitive.",
+        "Një mënyrë më e qartë dhe e organizuar për trajtimin e punës ditore dixhitale.",
+        "Një partner për të thirrur kur një problem nuk përshtatet qartë në një kategori tjetër.",
+        "Zgjidhje të ndërtuara sipas mënyrës se si punon vërtet biznesi juaj, jo një playbook i përgjithshëm.",
+      ],
+      ctaTitle: "Keni një dhimbje dixhitale që nuk përshtatet diku tjetër?",
+      ctaBody: "Përshkruani problemin aq thjeshtë sa dëshironi — do t'ju themi me sinqeritet nëse jemi përshtatësit e duhur për ta ndihmuar.",
+    },
   },
-  uiUxGraphic: {
-    tagline: "Design that looks professional and is actually built around how people use it.",
-    intro:
-      "Good design isn't just about looking polished — it's about making something easy to use and consistent across everywhere your business shows up. Think Solutions handles UI/UX for digital products and the graphic design your business needs day to day, from interfaces to social content.",
-    provides: [
-      "Interface design for websites and apps that's planned around how people actually navigate, not just visually styled after the fact.",
-      "Social media graphics and visuals that are consistent with your brand across every platform.",
-      "A visual identity that looks the same whether someone sees it on your site, your socials, or printed material.",
-      "Design files and assets you actually own and can reuse going forward.",
-    ],
-    capabilities: [
-      {
-        title: "UI/UX design",
-        description:
-          "Planning how a user moves through an interface, then designing it so the experience is intuitive, not just visually appealing.",
-      },
-      {
-        title: "Graphic design",
-        description:
-          "Design work for social posts, marketing material and business visuals, all built to a consistent standard.",
-      },
-      {
-        title: "Social media graphics",
-        description:
-          "Templates and one-off visuals sized and styled correctly for each platform, keeping your feed cohesive.",
-      },
-      {
-        title: "Business visuals",
-        description:
-          "Everyday design needs — presentations, one-pagers, simple brand assets — handled to a professional standard.",
-      },
-    ],
-    tools: ["Figma", "Canva", "UI/UX Design", "Brand Visuals", "Social Graphics"],
-    benefits: [
-      "A consistent, professional look across your website, socials and materials.",
-      "Interfaces that are easier for people to actually use, not just look at.",
-      "Less time spent trying to design things in-house without the right tools or experience.",
-      "A visual identity you can keep reusing rather than starting over each time.",
-    ],
-    ctaTitle: "Need design work that actually looks and feels consistent?",
-    ctaBody: "Share what you're working on — a site, a set of social posts, a full visual identity — and we'll go from there.",
-  },
-  businessSupport: {
-    tagline: "Practical digital help for the parts of the business that don't fit neatly anywhere else.",
-    intro:
-      "Not every business need fits neatly into 'website' or 'data' or 'design'. Think Solutions provides practical, tailored digital support for the everyday processes and problems businesses run into — the kind of work that quietly saves time once it's sorted out.",
-    provides: [
-      "Help identifying where digital tools could actually save you time, rather than adding more complexity.",
-      "Practical solutions built around how your business currently operates, not a rigid one-size-fits-all package.",
-      "Support with the processes that tend to get overlooked — file organization, basic workflow tools, small custom fixes.",
-      "A responsive partner for digital problems that don't have an obvious owner internally.",
-    ],
-    capabilities: [
-      {
-        title: "Digital business support",
-        description:
-          "General, hands-on help with the digital side of running a business, wherever the gap happens to be.",
-      },
-      {
-        title: "Process improvement",
-        description:
-          "Looking at how something is currently done and finding a more efficient, less manual way to do it.",
-      },
-      {
-        title: "Practical digital solutions",
-        description:
-          "Small, focused tools or fixes built for a specific problem, rather than an oversized system you don't need.",
-      },
-      {
-        title: "Tailored solutions",
-        description:
-          "Support shaped around your business specifically, since 'business support' looks different for every client.",
-      },
-    ],
-    tools: ["Process Improvement", "Workflow Tools", "Custom Solutions", "Digital Operations"],
-    benefits: [
-      "Less time lost to manual, repetitive digital tasks.",
-      "A clearer, more organized way of handling day-to-day digital work.",
-      "A partner to bring in when a problem doesn't fit neatly into another category.",
-      "Solutions built for how your business actually works, not a generic playbook.",
-    ],
-    ctaTitle: "Got a digital headache that doesn't fit anywhere else?",
-    ctaBody: "Describe the problem as plainly as you'd like — we'll tell you honestly whether we're the right fit to help.",
+  mk: {
+    webDesign: {
+      tagline: "Веб-страници создадени да го претставуваат вашиот бизнис како што треба и да продолжат да функционираат по лансирањето.",
+      intro: "Веб-страницата често е првото вистинско интеракција со вашиот бизнис. Think Solutions дизајнира и гради веб-страници во React кои брзо се вчитуваат, изгледаат добро на секој екран и се изградени така што можат да растат со вашиот бизнис — не само еден еднократен template кој се напушта по лансирањето.",
+      provides: [
+        "Веб-страница изградена околу вашите вистински услуги, публика и цели — не генерациски template со само лого.",
+        "Респонзивен layout кој работи добро на телефони, таблети и десктопи, бидејќи повеќето посетители никогаш нема да ја видат на десктоп монитор.",
+        "Јасна структура која ги води посетителите кон акцијата што ја сакате — форма, повик, резервација — наместо само да прикажува информации.",
+        "Континуирана грижа по лансирањето: ажурирања на содржина, мали поправки и подобрувања како што се менува вашиот бизнис.",
+      ],
+      capabilities: [
+        { title: "Респонзивен веб-дизајн", description: "Секој page е направен да се прилагоди на уредот на кој е прикажан, така што навигацијата, текстот и сликите остануваат лесни за употреба и на телефон и на голем монитор." },
+        { title: "Модерен UI/UX", description: "Лајаутите се планираат според тоа како луѓето навистина читаат и скенираат страница, така што важните информации и call-to-action се лесни за наоѓање." },
+        { title: "Оптимизација на перформансите", description: "Страниците се градат лесно — оптимизирани слики, минимални непотребни скрипти — така што страницата се вчитува брзо." },
+        { title: "SEO основи", description: "Структурата на страницата, насловите, мета податоците и брзината на вчитување се обработуваат правилно од почеток, давајќи добра техничка основа за пронаоѓање на пребарувачите." },
+        { title: "Професионални функции", description: "Контакт форми, пребарување услуги, интерактивни секции и какви било специфични барања на вашето работење, директно вградени во страницата." },
+        { title: "Интеграции & deploy", description: "Страницата е поврзана со она што и треба — е-пошта, алатки за резервација, analytics — и се спроведува на сигурна инфраструктура со гладок process на пуштање." },
+      ],
+      tools: ["React", "TypeScript", "Responsive Design", "Vite", "SEO", "Performance Optimization"],
+      benefits: [
+        "Страница која ја претставува вашата фирма кредибилно уште од првата посета.",
+        "Помалку посетители губени поради бавно вчитување или лош layout на мобилен уред.",
+        "Јасна структура која ги олеснува луѓето да ве контактираат или купат.",
+        "Техничка основа која може да се проширува, наместо повторно да се гради како што растете.",
+      ],
+      ctaTitle: "Дали размислувате за нова веб-страница или поправка на постоечката?",
+      ctaBody: "Кажете ни каде стоите денес и што треба да прави страницата — ние ќе се справиме со останатото.",
+    },
+    socialMedia: {
+      tagline: "Социјална присутност која е планирана, конзистентна и навистина изградена околу вашиот бизнис.",
+      intro: "Постирањето повремено не е стратегија. Think Solutions управува со планирањето, содржината и дневната присутност на вашите социјални канали, така што тие градат сигурна, препознатлива присутност за вашиот бизнис наместо да се молчат неделами.",
+      provides: [
+        "План за содржина изградена според она што вашиот бизнис навистина нуди, а не генерациски filler постови.",
+        "Редовно управување на вашите канали — постирање, распоред, следење — за да остане присутноста активна.",
+        "Содржина направена за секоја платформа правилно, наместо ист пост да се репостира насекаде.",
+        "Извештаи за тоа што функционира, така што одлуките се засноваат на резултати, а не на претпоставки.",
+      ],
+      capabilities: [
+        { title: "Стратегија на содржина", description: "План што да објавувате, колку често и зошто — изградена околу целите на вашиот бизнис, а не само според трендовите." },
+        { title: "Управување со канали", description: "Дневно ракување со Instagram, Facebook и други платформи, вклучувајќи планирање и основни одговори на заедницата." },
+        { title: "Присутност фокусирана на раст", description: "Содржина и ритам на постирање насочени кон градење на публика која е навистина релевантна за вашиот бизнис, а не само зголемување на бројот на следбеници." },
+        { title: "Присутност & конзистентност на бизнисот", description: "Препознатлив изглед и тон низ сите канали, така што вашиот бизнис се чувствува исто каде и да се најде." },
+      ],
+      tools: ["Instagram", "Facebook", "Content Strategy", "Scheduling & Publishing", "Performance Reporting"],
+      benefits: [
+        "Канали кои остануваат активни наместо да се згрозат меѓу постовите.",
+        "Конзистентна брендна присутност низ платформите.",
+        "Содржина која е навистина планирана, а не импровизирана наутро кога се објавува.",
+        "Поголема јасност за тоа што работи, засновано на вистински резултати.",
+      ],
+      ctaTitle: "Дали сакате вашите социјални канали реално да ја одразуваат работата зад нив?",
+      ctaBody: "Кажете ни кои платформи се најважни за вас и со што се борите во моментов.",
+    },
+    dataSolutions: {
+      tagline: "Преобразување на расфрланите табели и системи во бројки врз кои можете да дејствувате.",
+      intro: "Повеќето бизниси имаат податоци потребни за подобри одлуки — тие само се распрснати низ табели, експорти и системи кои не комуницираат меѓусебно. Think Solutions ги организира тие податоци и гради dashboards и извештаи кои се користат секој ден, а не само еднаш годишно.",
+      provides: [
+        "Dashboard-и кои покажуваат броеви што навистина значат за вашиот бизнис, ажурирани и готови да се проверуваат кога годе имате потреба.",
+        "Чисти, организирани податоци наместо расфрлани excel табели кои тешко се веруваат.",
+        "Извештаи изградени за одлуките што навистина ги донесувате — продажба, залиха, перформанси — не генерациски шаблони.",
+        "Автоматизација на повторливите делови на извештајноста, така што бројките не мора да се соберат рачно секој пат.",
+      ],
+      capabilities: [
+        { title: "Dashboards & reporting", description: "Интерактивни dashboards изградени во Power BI или Looker Studio кои даваат жив преглед на важните бројки, наместо статичен извештај што е застарен веќе на денот кога е пратен." },
+        { title: "Анализа на податоци", description: "Поглед над суровите броеви за да се објасни што навистина се случува во бизнисот — трендови, модели и што ги поттикнува." },
+        { title: "Управување со база на податоци", description: "Структуирање и одржување на податоците во MySQL или SQL, така што остануваат точни, организирани и лесни за прашување како што растат." },
+        { title: "Бизнис insight", description: "Превод на податоците во јасни заклучоци — што работи, што не, и на што треба да се насочите — наместо да ги толкувате суровите графикони сами." },
+        { title: "Автоматизација", description: "Поставување на повторливи извештаи и data pipelines за да се ажурираат рутинските бројки автоматски." },
+      ],
+      tools: ["Power BI", "Microsoft Excel", "MySQL", "SQL", "Looker Studio", "Dashboards & Reporting"],
+      benefits: [
+        "Одлуки засновани на актуелни бројки наместо интуиција или застарени табели.",
+        "Часови спасени секој месец со рачно собирање на извештаи.",
+        "Еден единствен, доверлив извор за бројките што се важни за вашиот бизнис.",
+        "Ран увид во проблеми или можности, наместо да ги најдете премногу доцна.",
+      ],
+      ctaTitle: "Дали имате податоци што навистина не ги користите?",
+      ctaBody: "Кажете ни кои системи или табели ги користите и што би сакале да видите многу појасно.",
+    },
+    uiUxGraphic: {
+      tagline: "Дизајн кој изгледа професионално и е навистина заснован на тоа како луѓето го користат.",
+      intro: "Добриот дизајн не е само да изгледа убаво — туку да биде лесен за користење и конзистентен каде и да се појави вашиот бизнис. Think Solutions се занимава со UI/UX за дигитални производи и графички дизајн што вашиот бизнис треба секој ден, од интерфејси до социјална содржина.",
+      provides: [
+        "Дизајн на интерфејси за веб-страници и апликации кој е планиран според тоа како луѓето навистина се движат, а не само визуелно стилизиран после фактум.",
+        "Графики и визуели за социјални медиуми кои се конзистентни со вашата марка на секоја платформа.",
+        "Визуелно идентитет кој изгледа исто без разлика дали го гледаат на вашата веб-страница, на социјалните мрежи или на печатени материјали.",
+        "Дизајнерски фајлови и assets кои навистина ги поседувате и можете да ги користите повторно понатаму.",
+      ],
+      capabilities: [
+        { title: "UI/UX дизајн", description: "Планирање како корисникот се движи низ интерфејсот, а потоа дизајнирање така што искуството да биде интуитивно, не само визуелно привлечно." },
+        { title: "Графички дизајн", description: "Работа на дизајн за социјални постови, маркетинг материјал и бизнис визуели, сите изградени според конзистентен стандард." },
+        { title: "Графики за социјални медиуми", description: "Шаблони и поединечни визуели правилно величински и стилски прилагодени за секоја платформа, така што feed-от останува кохезивен." },
+        { title: "Бизнис визуели", description: "Секојдневни потреби за дизајн — презентации, one-pagers, едноставни brand assets — обработени до професионален стандард." },
+      ],
+      tools: ["Figma", "Canva", "UI/UX Design", "Brand Visuals", "Social Graphics"],
+      benefits: [
+        "Конзистентен, професионален изглед низ вашата веб-страница, социјални мрежи и материјали.",
+        "Интерфејси кои се полесни за луѓето да ги користат, а не само да ги гледаат.",
+        "Помалку време потрошено на дизајнирање in-house без правилни алатки или искуство.",
+        "Визуелно идентитет кое можете повторно да го користите, наместо секој пат одново да започнувате.",
+      ],
+      ctaTitle: "Ви треба дизајн работа која навистина изгледа и се чувствува конзистентно?",
+      ctaBody: "Споделете што работите — веб-страница, сет на социјални постови, целосен визуелен идентитет — и ние ќе продолжиме од таму.",
+    },
+    businessSupport: {
+      tagline: "Практична дигитална помош за оние делови од бизнисот што не се вклопуваат лесно на друго место.",
+      intro: "Не секоја бизнис потреба се вклопува лесно во 'website', 'data' или 'design'. Think Solutions нуди практична, прилагодена дигитална поддршка за секојдневните процеси и проблеми со кои се соочуваат бизнисите — оној тип работа што тихо штеди време кога е решена.",
+      provides: [
+        "Помош во идентификувањето каде дигиталните алатки навистина можат да ви заштедат време, а не само да додаваат сложеност.",
+        "Практични решенија изградени според тоа како вашиот бизнис моментално работи, а не според rigid one-size-fits-all пакет.",
+        "Поддршка со процеси што често се занемаруваат — организација на фајлови, основни workflow алатки, мали custom fixes.",
+        "Реактивен партнер за дигитални проблеми кои немаат јасен сопственик внатре.",
+      ],
+      capabilities: [
+        { title: "Дигитална бизнис поддршка", description: "Општа, рачна помош со дигиталната страна на водењето бизнис, каде и да се појави празнината." },
+        { title: "Подобрување на процесите", description: "Поглед на тоа како нешто е моментално направено и наоѓање на поефикасен, помалку рачен начин на работа." },
+        { title: "Практични дигитални решенија", description: "Мали, фокусирани алатки или поправки направени за конкретен проблем, наместо претежок систем што не ви треба." },
+        { title: "Прилагодени решенија", description: "Поддршка обликувана според вашиот бизнис конкретно, бидејќи 'business support' изгледа различно за секој клиент." },
+      ],
+      tools: ["Process Improvement", "Workflow Tools", "Custom Solutions", "Digital Operations"],
+      benefits: [
+        "Помалку загубено време на рачни, повторувачки дигитални задачи.",
+        "Побаредовен и поорганизиран начин на работа со секојдневниот дигитален труд.",
+        "Партнер кој да се повика кога проблемот не се вклопува во друга категорија.",
+        "Решенија изградени според тоа како вашиот бизнис навистина работи, не генерациски playbook.",
+      ],
+      ctaTitle: "Имате дигитален проблем кој не се вклопува никде другаде?",
+      ctaBody: "Опишете го проблемот колку што сакате — ќе ви кажеме искрено дали сме соодветни да помогнеме.",
+    },
   },
 };

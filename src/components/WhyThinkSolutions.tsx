@@ -1,10 +1,10 @@
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { SectionHeading } from "./SectionHeading";
 
 type WhyThinkSolutionsProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 export function WhyThinkSolutions({ copy }: WhyThinkSolutionsProps) {

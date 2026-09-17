@@ -1,9 +1,9 @@
 import { Mail, Phone } from "lucide-react";
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { SectionHeading } from "./SectionHeading";
 
 type ContactProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 const CONTACT_EMAIL = "info@thinkofsolutions.com";

@@ -1,8 +1,8 @@
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { SectionHeading } from "./SectionHeading";
 
 type AboutProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 export function About({ copy }: AboutProps) {

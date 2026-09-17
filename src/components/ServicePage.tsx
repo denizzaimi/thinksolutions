@@ -18,7 +18,7 @@ type ServicePageProps = {
 
 export function ServicePage({ serviceId, language, onLanguageChange }: ServicePageProps) {
   const copy = translations[language];
-  const detail = serviceDetails[serviceId];
+  const detail = serviceDetails[language][serviceId];
   const serviceCopy = copy.services.items[serviceId];
   const reducedMotion = useReducedMotion();
 
@@ -44,7 +44,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         />
 
         <section className="section service-page__section">
-          <h2 className="service-page__heading">What Think Solutions provides</h2>
+          <h2 className="service-page__heading">{copy.servicePage.provides}</h2>
           <div className="provides-grid">
             {detail.provides.map((item) => (
               <motion.div
@@ -63,7 +63,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         </section>
 
         <section className="section section--dark service-page__section service-page__capabilities">
-          <h2 className="service-page__heading service-page__heading--light">Main Capabilities</h2>
+          <h2 className="service-page__heading service-page__heading--light">{copy.servicePage.capabilities}</h2>
           <div className="capability-grid capability-grid--dark">
             {detail.capabilities.map((capability, index) => (
               <motion.article
@@ -82,7 +82,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         </section>
 
         <section className="section service-page__section">
-          <h2 className="service-page__heading">Technologies &amp; Tools</h2>
+          <h2 className="service-page__heading">{copy.servicePage.tools}</h2>
           <div className="tool-badges">
             {detail.tools.map((tool) => (
               <span className="tool-badge" key={tool}>

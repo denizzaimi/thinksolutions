@@ -1,10 +1,10 @@
 import { ArrowRight, Check } from "lucide-react";
 import type { PricingPackage } from "../data/pricing";
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 
 type PricingCardProps = {
   item: PricingPackage;
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 export function PricingCard({ item, copy }: PricingCardProps) {

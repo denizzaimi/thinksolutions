@@ -46,6 +46,11 @@ export const translations: Record<
       intro: string;
       items: Record<ServiceId, ServiceCopy>;
     };
+    servicePage: {
+      provides: string;
+      capabilities: string;
+      tools: string;
+    };
     why: {
       eyebrow: string;
       title: string;
@@ -140,6 +145,11 @@ export const translations: Record<
           description: "Practical digital support tailored to improve processes and solve real business needs.",
         },
       },
+    },
+    servicePage: {
+      provides: "What Think Solutions provides",
+      capabilities: "Main Capabilities",
+      tools: "Technologies & Tools",
     },
     why: {
       eyebrow: "Why Think Solutions",
@@ -259,10 +269,15 @@ export const translations: Record<
           description: "Figma, Canva, UX-Design, Social-Media-Grafiken und professionelle Unternehmensvisuals.",
         },
         businessSupport: {
-          title: "Business Support",
+          title: "Geschäftsunterstützung",
           description: "Praktische digitale Unterstützung zur Verbesserung von Prozessen und konkreten Anforderungen.",
         },
       },
+    },
+    servicePage: {
+      provides: "Was Think Solutions bietet",
+      capabilities: "Hauptfähigkeiten",
+      tools: "Technologien & Tools",
     },
     why: {
       eyebrow: "Warum Think Solutions",
@@ -314,7 +329,7 @@ export const translations: Record<
       title: "Digitales Denken mit praktischem Geschäftsbezug.",
       body:
         "Think Solutions verbindet Technologie, Design, Daten, digitale Strategie und Business Support, damit Unternehmen Auftreten, Prozesse und Wachstum verbessern können.",
-      pillars: ["Technologie", "Design", "Daten", "Digitale Strategie", "Business Support"],
+      pillars: ["Technologie", "Design", "Daten", "Digitale Strategie", "Geschäftsunterstützung"],
     },
     ourWork: {
       eyebrow: "Unsere Arbeit",
@@ -386,6 +401,11 @@ export const translations: Record<
           description: "Mbështetje praktike digjitale për procese më të mira dhe zgjidhje sipas nevojave reale.",
         },
       },
+    },
+    servicePage: {
+      provides: "Çfarë ofron Think Solutions",
+      capabilities: "Kapacitetet kryesore",
+      tools: "Teknologjitë & Mjetet",
     },
     why: {
       eyebrow: "Pse Think Solutions",
@@ -509,6 +529,11 @@ export const translations: Record<
           description: "Практична дигитална поддршка за подобри процеси и решенија според реални потреби.",
         },
       },
+    },
+    servicePage: {
+      provides: "Што Think Solutions нуди",
+      capabilities: "Главни капацитети",
+      tools: "Технологии & алати",
     },
     why: {
       eyebrow: "Зошто Think Solutions",

@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { services } from "../data/services";
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 import { SectionHeading } from "./SectionHeading";
 import { ServiceCard } from "./ServiceCard";
 
 type ServicesProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 export function Services({ copy }: ServicesProps) {

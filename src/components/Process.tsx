@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import type { translations } from "../data/translations";
+import type { Language, translations } from "../data/translations";
 import { SectionHeading } from "./SectionHeading";
 
 type ProcessProps = {
-  copy: (typeof translations)["en"];
+  copy: (typeof translations)[Language];
 };
 
 export function Process({ copy }: ProcessProps) {
