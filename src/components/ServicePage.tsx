@@ -37,11 +37,7 @@ export function ServicePage({ serviceId, language, onLanguageChange }: ServicePa
         }}
       />
       <main className="service-page">
-        <PageHeader
-          eyebrow={copy.services.eyebrow}
-          title={serviceCopy.title}
-          intro={detail.tagline}
-        />
+        <PageHeader title={serviceCopy.title} intro={detail.tagline} />
 
         <section className="section service-page__section">
           <h2 className="service-page__heading">{copy.servicePage.provides}</h2>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 
 type PageHeaderProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   intro?: string;
   backHref?: string;
@@ -28,7 +28,7 @@ export function PageHeader({ eyebrow, title, intro, backHref, backLabel, classNa
             {backLabel}
           </a>
         ) : null}
-        <span className="eyebrow">{eyebrow}</span>
+        {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
         <h1>{title}</h1>
         {intro ? <p>{intro}</p> : null}
       </div>
