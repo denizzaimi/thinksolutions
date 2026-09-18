@@ -6,9 +6,10 @@ import { useReducedMotion } from "../hooks/useReducedMotion";
 type ProjectCardProps = {
   project: Project;
   viewProjectLabel: string;
+  onOpen: () => void;
 };
 
-export function ProjectCard({ project, viewProjectLabel }: ProjectCardProps) {
+export function ProjectCard({ project, viewProjectLabel, onOpen }: ProjectCardProps) {
   const reducedMotion = useReducedMotion();
   const initials = project.name
     .split(" ")
@@ -20,6 +21,15 @@ export function ProjectCard({ project, viewProjectLabel }: ProjectCardProps) {
   return (
     <motion.article
       className="project-card"
+      role="button"
+      tabIndex={0}
+      onClick={onOpen}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onOpen();
+        }
+      }}
       initial={{ opacity: 0, y: reducedMotion ? 0 : 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
@@ -49,12 +59,10 @@ export function ProjectCard({ project, viewProjectLabel }: ProjectCardProps) {
           </div>
         ) : null}
 
-        {project.url ? (
-          <a className="project-card__link" href={project.url} target="_blank" rel="noreferrer">
-            {viewProjectLabel}
-            <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
-        ) : null}
+        <span className="project-card__link">
+          {viewProjectLabel}
+          <ArrowUpRight size={16} aria-hidden="true" />
+        </span>
       </div>
     </motion.article>
   );

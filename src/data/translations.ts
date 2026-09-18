@@ -80,6 +80,11 @@ export const translations: Record<
       intro: string;
       comingSoon: string;
       viewProject: string;
+      details: string;
+      close: string;
+      year: string;
+      services: string;
+      tools: string;
     };
     contact: {
       eyebrow: string;
@@ -208,7 +213,12 @@ export const translations: Record<
       title: "A look at what we've built.",
       intro: "A selection of projects Think Solutions has delivered for real clients.",
       comingSoon: "Project case studies are being prepared and will be added here soon.",
-      viewProject: "View Project",
+      viewProject: "View details",
+      details: "Project details",
+      close: "Close",
+      year: "Year",
+      services: "Services",
+      tools: "What was used",
     },
     contact: {
       eyebrow: "Contact",
@@ -336,7 +346,12 @@ export const translations: Record<
       title: "Ein Einblick in unsere Projekte.",
       intro: "Eine Auswahl an Projekten, die Think Solutions für echte Kunden umgesetzt hat.",
       comingSoon: "Projektbeispiele werden vorbereitet und in Kürze hier ergänzt.",
-      viewProject: "Projekt ansehen",
+      viewProject: "Details ansehen",
+      details: "Projektdetails",
+      close: "Schließen",
+      year: "Jahr",
+      services: "Leistungen",
+      tools: "Verwendet",
     },
     contact: {
       eyebrow: "Kontakt",
@@ -464,7 +479,12 @@ export const translations: Record<
       title: "Një vështrim mbi atë që kemi ndërtuar.",
       intro: "Një përzgjedhje projektesh që Think Solutions ka realizuar për klientë realë.",
       comingSoon: "Studimet e rasteve të projekteve po përgatiten dhe do të shtohen së shpejti këtu.",
-      viewProject: "Shiko Projektin",
+      viewProject: "Shiko detajet",
+      details: "Detajet e projektit",
+      close: "Mbyll",
+      year: "Viti",
+      services: "Shërbimet",
+      tools: "Çfarë u përdor",
     },
     contact: {
       eyebrow: "Kontakt",
@@ -592,7 +612,12 @@ export const translations: Record<
       title: "Поглед кон она што го изградивме.",
       intro: "Избор на проекти што Think Solutions ги реализираше за реални клиенти.",
       comingSoon: "Студии на случаи од проекти се подготвуваат и наскоро ќе бидат додадени овде.",
-      viewProject: "Погледни проект",
+      viewProject: "Види детали",
+      details: "Детали за проектот",
+      close: "Затвори",
+      year: "Година",
+      services: "Услуги",
+      tools: "Што е користено",
     },
     contact: {
       eyebrow: "Контакт",
