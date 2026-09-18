@@ -378,13 +378,14 @@ img {
 }
 
 .hero__actions .button--secondary {
-  border-color: rgba(255, 255, 255, 0.42);
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #111111;
 }
 
 .hero__actions .button--secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #f3f3f3;
+  color: #111111;
 }
 
 .hero__brand-line {
