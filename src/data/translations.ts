@@ -169,7 +169,7 @@ export const translations: Record<
       ],
     },
     process: {
-      eyebrow: "Process",
+      eyebrow: "",
       title: "A simple path from business need to better execution.",
       steps: [
         { title: "Understand", description: "We understand your business, goals and challenges." },
@@ -302,7 +302,7 @@ export const translations: Record<
       ],
     },
     process: {
-      eyebrow: "Prozess",
+      eyebrow: "",
       title: "Ein klarer Weg vom Bedarf zur besseren Umsetzung.",
       steps: [
         { title: "Verstehen", description: "Wir verstehen Ihr Unternehmen, Ihre Ziele und Herausforderungen." },
@@ -435,7 +435,7 @@ export const translations: Record<
       ],
     },
     process: {
-      eyebrow: "Procesi",
+      eyebrow: "",
       title: "Një rrugë e thjeshtë nga nevoja në zbatim më të mirë.",
       steps: [
         { title: "Kuptojmë", description: "Kuptojmë biznesin, qëllimet dhe sfidat tuaja." },
@@ -568,7 +568,7 @@ export const translations: Record<
       ],
     },
     process: {
-      eyebrow: "Процес",
+      eyebrow: "",
       title: "Едноставен пат од потреба до подобра реализација.",
       steps: [
         { title: "Разбираме", description: "Го разбираме вашиот бизнис, цели и предизвици." },

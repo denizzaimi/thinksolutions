@@ -6,6 +6,7 @@ import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { OurWorkPage } from "./components/OurWorkPage";
 import { Pricing } from "./components/Pricing";
+import { Process } from "./components/Process";
 import { ServicePage } from "./components/ServicePage";
 import { Services } from "./components/Services";
 import { WhyThinkSolutions } from "./components/WhyThinkSolutions";
@@ -83,6 +84,7 @@ function App() {
         <Hero copy={copy.hero} />
         <Services copy={copy} />
         <WhyThinkSolutions copy={copy} />
+        <Process copy={copy} />
         <Pricing copy={copy} />
         <Contact copy={copy} />
       </main>
