@@ -15,6 +15,11 @@ type ServiceCopy = {
   description: string;
 };
 
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 type PricingCopy = {
   title: string;
   description: string;
@@ -50,6 +55,11 @@ export const translations: Record<
       provides: string;
       capabilities: string;
       tools: string;
+      benefits: string;
+      benefitsIntro: string;
+      benefitTitles: string[];
+      faqTitle: string;
+      faq: FaqItem[];
     };
     why: {
       eyebrow: string;
@@ -155,6 +165,24 @@ export const translations: Record<
       provides: "What Think Solutions provides",
       capabilities: "Main Capabilities",
       tools: "Technologies & Tools",
+      benefits: "Benefits for Your Business",
+      benefitsIntro: "The right digital solution should do more than look polished. It should make your work clearer, more effective and easier to grow.",
+      benefitTitles: [
+        "A clearer presence",
+        "Easier access",
+        "More trust",
+        "Room to grow",
+      ],
+      faqTitle: "How can this service help your business?",
+      faq: [
+        { question: "Why should I maintain my website regularly?", answer: "It keeps the site secure, current and working properly." },
+        { question: "How often should maintenance be done?", answer: "A quick monthly check is a good starting point." },
+        { question: "What does website maintenance include?", answer: "Updates, backups, security checks, fixes and small content changes." },
+        { question: "What happens if I leave my website unattended?", answer: "It can become slower, outdated or vulnerable to security problems." },
+        { question: "How quickly can you make a change?", answer: "Small updates are usually handled within a few business days." },
+        { question: "Is maintenance paid monthly or yearly?", answer: "Either option can work. We agree on the format that fits your needs." },
+        { question: "How much does website maintenance cost?", answer: "It depends on the size of the site and the level of support required." },
+      ],
     },
     why: {
       eyebrow: "Why Think Solutions",
@@ -288,6 +316,19 @@ export const translations: Record<
       provides: "Was Think Solutions bietet",
       capabilities: "Hauptfähigkeiten",
       tools: "Technologien & Tools",
+      benefits: "Vorteile für Ihr Unternehmen",
+      benefitsIntro: "Die richtige digitale Lösung sollte mehr leisten, als nur professionell auszusehen. Sie soll Ihre Arbeit klarer, wirksamer und leichter erweiterbar machen.",
+      benefitTitles: ["Mehr Klarheit", "Einfacherer Zugang", "Mehr Vertrauen", "Platz zum Wachsen"],
+      faqTitle: "Wie kann diese Leistung Ihr Unternehmen unterstützen?",
+      faq: [
+        { question: "Warum sollte ich meine Website regelmäßig pflegen?", answer: "Damit sie sicher, aktuell und zuverlässig bleibt." },
+        { question: "Wie oft sollte eine Website gewartet werden?", answer: "Eine kurze monatliche Prüfung ist ein guter Anfang." },
+        { question: "Was gehört zur Website-Pflege?", answer: "Updates, Backups, Sicherheitschecks, Fehlerbehebungen und kleine Inhaltsänderungen." },
+        { question: "Was passiert ohne regelmäßige Pflege?", answer: "Die Website kann langsamer, veraltet oder unsicher werden." },
+        { question: "Wie schnell werden Änderungen umgesetzt?", answer: "Kleine Änderungen erledigen wir meist innerhalb weniger Werktage." },
+        { question: "Wird monatlich oder jährlich bezahlt?", answer: "Beides ist möglich, je nach gewünschter Betreuung." },
+        { question: "Was kostet die Website-Pflege?", answer: "Das hängt vom Umfang der Website und dem Supportbedarf ab." },
+      ],
     },
     why: {
       eyebrow: "Warum Think Solutions",
@@ -421,6 +462,19 @@ export const translations: Record<
       provides: "Çfarë ofron Think Solutions",
       capabilities: "Kapacitetet kryesore",
       tools: "Teknologjitë & Mjetet",
+      benefits: "Përfitime për biznesin tuaj",
+      benefitsIntro: "Zgjidhja e duhur digjitale duhet të bëjë më shumë se të duket profesionale. Ajo duhet ta bëjë punën tuaj më të qartë, më efektive dhe më të lehtë për t'u zhvilluar.",
+      benefitTitles: ["Më shumë qartësi", "Qasje më e lehtë", "Më shumë besim", "Hapësirë për rritje"],
+      faqTitle: "Si mund ta ndihmojë biznesin tuaj kjo shërbim?",
+      faq: [
+        { question: "Pse duhet ta mirëmbaj rregullisht faqen time?", answer: "Që të mbetet e sigurt, e përditësuar dhe funksionale." },
+        { question: "Sa shpesh duhet të bëhet mirëmbajtja?", answer: "Një kontroll i shkurtër çdo muaj është një fillim i mirë." },
+        { question: "Çfarë përfshin mirëmbajtja?", answer: "Përditësime, kopje rezervë, kontrolle sigurie, rregullime dhe ndryshime të vogla." },
+        { question: "Çfarë ndodh nëse faqja lihet pa mirëmbajtje?", answer: "Mund të ngadalësohet, të vjetrohet ose të ketë probleme sigurie." },
+        { question: "Sa shpejt mund të bëhen ndryshimet?", answer: "Ndryshimet e vogla zakonisht bëhen brenda disa ditëve pune." },
+        { question: "Pagesa bëhet mujore apo vjetore?", answer: "Të dyja mundësitë janë të disponueshme." },
+        { question: "Sa kushton mirëmbajtja e faqes?", answer: "Varet nga madhësia e faqes dhe niveli i mbështetjes." },
+      ],
     },
     why: {
       eyebrow: "Pse Think Solutions",
@@ -554,6 +608,19 @@ export const translations: Record<
       provides: "Што Think Solutions нуди",
       capabilities: "Главни капацитети",
       tools: "Технологии & алати",
+      benefits: "Придобивки за вашиот бизнис",
+      benefitsIntro: "Правилното дигитално решение треба да прави повеќе од тоа само да изгледа професионално. Тоа треба да ја направи вашата работа појасна, поефикасна и полесна за развој.",
+      benefitTitles: ["Повеќе јасност", "Полесен пристап", "Повеќе доверба", "Простор за раст"],
+      faqTitle: "Како оваа услуга може да му помогне на вашиот бизнис?",
+      faq: [
+        { question: "Зошто треба редовно да ја одржувам веб-страницата?", answer: "За да остане безбедна, ажурна и функционална." },
+        { question: "Колку често треба да се одржува?", answer: "Кратка месечна проверка е добар почеток." },
+        { question: "Што опфаќа одржувањето?", answer: "Ажурирања, резервни копии, безбедносни проверки, поправки и мали промени." },
+        { question: "Што се случува без редовно одржување?", answer: "Страницата може да стане побавна, застарена или небезбедна." },
+        { question: "Колку брзо се прават промените?", answer: "Малите промени обично се завршуваат за неколку работни дена." },
+        { question: "Плаќањето е месечно или годишно?", answer: "Можно е и едното и другото, според потребната поддршка." },
+        { question: "Колку чини одржувањето на веб-страницата?", answer: "Цената зависи од големината на страницата и потребната поддршка." },
+      ],
     },
     why: {
       eyebrow: "Зошто Think Solutions",
