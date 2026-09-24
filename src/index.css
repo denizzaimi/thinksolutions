@@ -1725,17 +1725,47 @@ img {
   }
 
   .service-page__benefits {
-    padding: 72px 12px;
+    width: 100%;
+    padding: 64px 16px;
   }
 
   .service-page__benefits-inner {
     grid-template-columns: 1fr;
     gap: 38px;
+    width: 100%;
   }
 
   .service-page__benefits-intro h2,
   .service-page__benefits-intro p {
     max-width: none;
+  }
+
+  .service-page__benefits-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .service-page__benefits-intro p {
+    margin-top: 16px;
+    font-size: 1rem;
+  }
+
+  .service-page__benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .benefit-card {
+    min-height: 0;
+    padding: 24px 22px;
+    border-radius: 18px;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.08rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.96rem;
   }
 
   .benefit-card--bottom {
