@@ -18,9 +18,7 @@ type NavbarProps = {
 
 const navItems = [
   { id: "home", href: "/" },
-  { id: "services", href: "/#services" },
   { id: "ourWork", href: "/our-work" },
-  { id: "pricing", href: "/#pricing" },
   { id: "about", href: "/about" },
   { id: "contact", href: "/#contact" },
 ] as const;

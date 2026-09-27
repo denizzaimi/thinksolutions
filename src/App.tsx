@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AboutPage } from "./components/AboutPage";
+import { CaseStudyPage } from "./components/CaseStudyPage";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -10,6 +11,7 @@ import { Process } from "./components/Process";
 import { ServicePage } from "./components/ServicePage";
 import { Services } from "./components/Services";
 import { WhyThinkSolutions } from "./components/WhyThinkSolutions";
+import { projects } from "./data/Work";
 import { services } from "./data/services";
 import { translations, type Language } from "./data/translations";
 
@@ -26,6 +28,7 @@ type Route =
   | { type: "home" }
   | { type: "about" }
   | { type: "our-work" }
+  | { type: "our-work-project"; projectSlug: string }
   | { type: "service"; serviceId: (typeof services)[number]["id"] };
 
 function resolveRoute(): Route {
@@ -35,6 +38,12 @@ function resolveRoute(): Route {
 
   if (path === "/about") return { type: "about" };
   if (path === "/our-work") return { type: "our-work" };
+
+  const projectMatch = path.match(/^\/our-work\/([a-z0-9-]+)$/);
+  if (projectMatch) {
+    const project = projects.find((item) => item.slug === projectMatch[1]);
+    if (project) return { type: "our-work-project", projectSlug: project.slug };
+  }
 
   const serviceMatch = path.match(/^\/services\/([a-z0-9-]+)$/);
   if (serviceMatch) {
@@ -60,6 +69,10 @@ function App() {
 
   if (route.type === "our-work") {
     return <OurWorkPage language={language} onLanguageChange={setLanguage} />;
+  }
+
+  if (route.type === "our-work-project") {
+    return <CaseStudyPage projectSlug={route.projectSlug} language={language} onLanguageChange={setLanguage} />;
   }
 
   if (route.type === "service") {
