@@ -2028,6 +2028,17 @@ img {
   margin-top: 18px;
 }
 
+@media (min-width: 921px) {
+  .social-case-study__hero-grid {
+    align-items: flex-start;
+  }
+
+  .social-case-study__gallery {
+    margin-top: 52px;
+    align-self: flex-end;
+  }
+}
+
 @media (max-width: 920px) {
   .case-study-about,
   .case-study-hero__content,
