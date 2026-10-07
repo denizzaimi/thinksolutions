@@ -29,7 +29,10 @@ export function ProjectCard({ project, viewProjectLabel }: ProjectCardProps) {
             ))}
           </div>
         ) : project.thumbnail ? (
-          <img src={project.thumbnail} alt={`${project.name} logo`} />
+          <img
+            src={project.thumbnail}
+            alt={project.slug === "superstore-sales-dashboard" ? "Superstore Dataset cover with sample order data in the background" : `${project.name} logo`}
+          />
         ) : (
           <span className="project-card__initials" aria-hidden="true">TS</span>
         )}

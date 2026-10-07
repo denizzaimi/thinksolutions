@@ -3,6 +3,7 @@ export type Project = {
   slug: string;
   name: string;
   description: string;
+  category?: string;
   tagline?: string;
   servicesProvided: string[];
   technologies?: string[];
@@ -44,5 +45,23 @@ export const projects: Project[] = [
     thumbnail: "/social/petro.jpeg",
     heroImage: "/social/petro.jpeg",
     images: ["/social/petro.jpeg", "/social/moto.jpeg", "/social/drite.jpeg", "/social/pure.jpeg"],
+  },
+  {
+    id: "superstore-sales-dashboard",
+    slug: "superstore-sales-dashboard",
+    name: "Superstore Sales Dashboard",
+    category: "Data Solutions",
+    description: "An interactive Power BI dashboard for exploring Superstore sales, profit, discounts, and customer records.",
+    tagline: "Turning Superstore order data into an interactive view of sales and profitability.",
+    servicesProvided: ["Data Analysis", "Power BI Dashboard", "Data Visualization"],
+    technologies: ["Microsoft Excel", "Power BI"],
+    thumbnail: "/data-solutions/superstore-cover.svg",
+    heroImage: "/data-solutions/superstore-dashboard.png",
+    images: [
+      "/data-solutions/superstore-dashboard.png",
+      "/data-solutions/superstore-state-filter.png",
+      "/data-solutions/superstore-customer-filter.png",
+      "/data-solutions/superstore-excel-data.png",
+    ],
   },
 ];

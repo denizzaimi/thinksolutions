@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="720" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172126"/>
+      <stop offset="1" stop-color="#29383E"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="360" y1="80" x2="360" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172126" stop-opacity=".06"/>
+      <stop offset=".52" stop-color="#172126" stop-opacity=".88"/>
+      <stop offset="1" stop-color="#172126" stop-opacity=".98"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h720v720H0z"/>
+  <g stroke="#DCE8E8" stroke-opacity=".13">
+    <path d="M48 78h624M48 128h624M48 178h624M48 228h624M48 278h624M48 328h624M48 378h624M48 428h624M48 478h624M48 528h624M48 578h624"/>
+    <path d="M48 78v500M170 78v500M292 78v500M414 78v500M536 78v500M672 78v500"/>
+  </g>
+  <g fill="#A9C4C5" fill-opacity=".34" font-family="Arial, sans-serif" font-size="17">
+    <text x="64" y="110">ORDER ID</text><text x="184" y="110">CUSTOMER</text><text x="307" y="110">REGION</text><text x="430" y="110">CATEGORY</text><text x="551" y="110">SALES</text>
+    <text x="64" y="160">CA-2016-152156</text><text x="184" y="160">Claire Gute</text><text x="307" y="160">South</text><text x="430" y="160">Furniture</text><text x="551" y="160">$261.96</text>
+    <text x="64" y="210">CA-2016-138688</text><text x="184" y="210">Darrin Van Huff</text><text x="307" y="210">West</text><text x="430" y="210">Office Supplies</text><text x="551" y="210">$14.62</text>
+    <text x="64" y="260">US-2015-108966</text><text x="184" y="260">Sean O'Donnell</text><text x="307" y="260">South</text><text x="430" y="260">Furniture</text><text x="551" y="260">$957.58</text>
+    <text x="64" y="310">CA-2014-115812</text><text x="184" y="310">Brosina Hoffman</text><text x="307" y="310">West</text><text x="430" y="310">Technology</text><text x="551" y="310">$48.86</text>
+    <text x="64" y="360">CA-2017-114412</text><text x="184" y="360">Andrew Allen</text><text x="307" y="360">East</text><text x="430" y="360">Office Supplies</text><text x="551" y="360">$125.90</text>
+    <text x="64" y="410">US-2016-118983</text><text x="184" y="410">Harold Pawlan</text><text x="307" y="410">Central</text><text x="430" y="410">Office Supplies</text><text x="551" y="410">$68.81</text>
+    <text x="64" y="460">CA-2014-105893</text><text x="184" y="460">Pete Kriz</text><text x="307" y="460">Central</text><text x="430" y="460">Furniture</text><text x="551" y="460">$57.58</text>
+    <text x="64" y="510">CA-2016-167199</text><text x="184" y="510">Alejandro Grove</text><text x="307" y="510">West</text><text x="430" y="510">Office Supplies</text><text x="551" y="510">$12.96</text>
+  </g>
+  <path fill="url(#fade)" d="M0 0h720v720H0z"/>
+  <text x="54" y="350" fill="#fff" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-2">Superstore</text>
+  <text x="54" y="424" fill="#fff" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-2">Dataset</text>
+  <text x="58" y="470" fill="#C4D3D4" font-family="Arial, sans-serif" font-size="19" letter-spacing="3">ORDERS  ·  CUSTOMERS  ·  SALES</text>
+  <g fill="#E52428">
+    <rect x="56" y="590" width="28" height="48" rx="4"/>
+    <rect x="96" y="562" width="28" height="76" rx="4"/>
+    <rect x="136" y="578" width="28" height="60" rx="4"/>
+    <rect x="176" y="530" width="28" height="108" rx="4"/>
+    <rect x="216" y="548" width="28" height="90" rx="4"/>
+  </g>
+  <path d="M48 640h624" stroke="#DCE8E8" stroke-opacity=".3"/>
+  <text x="666" y="622" fill="#C4D3D4" font-family="Arial, sans-serif" font-size="16" text-anchor="end">POWER BI</text>
+</svg>

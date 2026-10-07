@@ -56,6 +56,10 @@ export function CaseStudyPage({ projectSlug, language, onLanguageChange }: CaseS
     return <SocialMediaCaseStudy project={project} language={language} onLanguageChange={onLanguageChange} />;
   }
 
+  if (project.slug === "superstore-sales-dashboard") {
+    return <SuperstoreCaseStudy project={project} language={language} onLanguageChange={onLanguageChange} />;
+  }
+
   return (
     <>
       <Navbar
@@ -178,6 +182,134 @@ export function CaseStudyPage({ projectSlug, language, onLanguageChange }: CaseS
               </p>
             </div>
           </div>
+        </section>
+
+        <nav className="case-study-footer" aria-label="Case study navigation">
+          <a href="/our-work" className="case-study-nav case-study-nav--back">
+            <ArrowLeft size={18} aria-hidden="true" />
+            Back to Our Work
+          </a>
+        </nav>
+      </main>
+
+      <Footer copy={copy} />
+    </>
+  );
+}
+
+const SUPERSTORE_GALLERY = [
+  {
+    image: "/data-solutions/superstore-dashboard.png",
+    alt: "Power BI Superstore dashboard with summary metrics, state profit chart, customer table, and map",
+    caption: "The overview combines headline KPIs, state-level profit, customer details, and geographic distribution.",
+  },
+  {
+    image: "/data-solutions/superstore-state-filter.png",
+    alt: "Power BI dashboard with the State filter expanded",
+    caption: "The State slicer exposes sales by state and can be used alongside Region and Category filters.",
+  },
+  {
+    image: "/data-solutions/superstore-customer-filter.png",
+    alt: "Power BI dashboard filtered to customer John Murray",
+    caption: "Filtering to John Murray updates the cards, profit chart, customer records, and map together.",
+  },
+];
+
+type SuperstoreCaseStudyProps = {
+  project: Project;
+  language: Language;
+  onLanguageChange: (language: Language) => void;
+};
+
+function SuperstoreCaseStudy({ project, language, onLanguageChange }: SuperstoreCaseStudyProps) {
+  const copy = translations[language];
+
+  return (
+    <>
+      <Navbar
+        language={language}
+        onLanguageChange={onLanguageChange}
+        copy={{
+          nav: copy.nav,
+          common: {
+            language: copy.common.language,
+            menu: copy.common.menu,
+            closeMenu: copy.common.closeMenu,
+          },
+        }}
+      />
+
+      <main className="case-study-page superstore-case-study">
+        <header className="superstore-case-study__hero">
+          <a href="/our-work" className="case-study-back-link">
+            <ArrowLeft size={18} aria-hidden="true" />
+            Back to Our Work
+          </a>
+          <p className="section-kicker">{project.category}</p>
+          <h1>{project.name}</h1>
+          <p className="superstore-case-study__tagline">{project.tagline}</p>
+          <p className="superstore-case-study__intro">
+            This Power BI report turns the Superstore order dataset into an interactive overview of sales and profitability.
+            Region, state, and category slicers and a customer-name search make it possible to move from the full picture to
+            individual customer records.
+          </p>
+        </header>
+
+        <section className="superstore-case-study__overview">
+          <div>
+            <p className="section-kicker">Dashboard overview</p>
+            <h2>See performance by state, then explore the records behind it.</h2>
+          </div>
+          <div className="superstore-case-study__metrics" aria-label="Dashboard summary metrics">
+            <div><span>Total profit</span><strong>$286.40K</strong></div>
+            <div><span>Total sales</span><strong>$2.30M</strong></div>
+            <div><span>Discount</span><strong>1.6K</strong></div>
+          </div>
+          <p>
+            In the unfiltered view, California and New York lead the profit chart at about $76.4K and $74.0K. The table
+            lists customer IDs, names, and cities, while the map plots customer locations. Together, these views provide
+            both a high-level comparison and a way to inspect individual entries.
+          </p>
+        </section>
+
+        <section className="superstore-case-study__gallery" aria-label="Superstore dashboard screenshots">
+          {SUPERSTORE_GALLERY.map((item) => (
+            <figure key={item.image}>
+              <img src={item.image} alt={item.alt} />
+              <figcaption>{item.caption}</figcaption>
+            </figure>
+          ))}
+        </section>
+
+        <section className="superstore-case-study__details">
+          <article>
+            <p className="section-kicker">Interactive filters</p>
+            <h2>Compare regions, states, categories, and customers.</h2>
+            <p>
+              The report includes Region, State, and Category slicers, plus a Customer_Name search. The open state filter
+              shows sales totals beside state names, making it easy to choose a location and see the rest of the report
+              respond to that selection.
+            </p>
+          </article>
+          <article>
+            <p className="section-kicker">Customer-level view</p>
+            <h2>Follow one customer through the report.</h2>
+            <p>
+              With John Murray selected, the dashboard shows $7.63K in sales, $1.57K in profit, and 2.4 in discounts. Its
+              profit chart includes both positive and negative state results—for example, $1,228.18 in New York and losses
+              in Texas and Ohio—alongside 13 matching records and their map locations.
+            </p>
+          </article>
+        </section>
+
+        <section className="superstore-case-study__source">
+          <p className="section-kicker">Source data</p>
+          <h2>Bring us the data you have. We’ll help make sense of it.</h2>
+          <p>
+            Even when data is messy or spread across different files, we can organize it and turn it into clear, useful
+            insights. For this project, we shaped an existing Superstore dataset—with order, customer, location, and product
+            details—into an interactive Power BI report.
+          </p>
         </section>
 
         <nav className="case-study-footer" aria-label="Case study navigation">
