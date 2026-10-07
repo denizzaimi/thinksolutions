@@ -106,7 +106,7 @@ export function CaseStudyPage({ projectSlug, language, onLanguageChange }: CaseS
         </header>
 
         <section className="case-study-section case-study-section--intro">
-          <div className="case-study-section__inner case-study-section__inner--narrow case-study-overview">
+          <div className="case-study-section__inner case-study-overview">
             <p>
               Planning a trip to Albania can mean bouncing between Google Maps, Instagram, TikTok, travel blogs, and messages
               from friends. The useful information is there, but it is scattered across too many places to become a simple
